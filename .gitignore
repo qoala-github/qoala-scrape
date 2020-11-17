@@ -3,3 +3,8 @@
 ################################################################################
 
 /.idea/inspectionProfiles
+/data_model/__pycache__
+/authorization/__pycache__
+/__pycache__
+/app_configurations/__pycache__
+/.idea

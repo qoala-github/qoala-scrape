@@ -1,0 +1,16 @@
+[
+  {
+        "username": "qoalauser01",
+        "full_name": "Qoala User 01",
+        "email": "qoalauser01@example.com",
+        "hashed_password": "$2b$12$dtBGVxSCXiR7YQREOpaFJ.ttr8O08kzMjU7/pLoQYr0W20tWiiHGu",
+        "disabled": false
+    },
+    {
+        "username": "qoalauser02",
+        "full_name": "Qoala User 02",
+        "email": "qoalauser02@example.com",
+        "hashed_password": "$2b$12$XONhdNXmWzEzVUYSjsSwmugTHuFRMn94YHfZAb5w8JkgLzb4KFe.K",
+        "disabled": false
+    }
+]
