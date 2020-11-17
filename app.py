@@ -13,6 +13,8 @@ from data_model.userdata import User, UserCoreModel
 from app_configurations.app_settings import AppSetting
 from pydantic import BaseModel
 
+from web_scrape_module.web_scrape_handler import WebScrapeHandler
+
 app_settings = AppSetting()
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 # oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
@@ -89,6 +91,13 @@ async def read_users_me(current_user: User = Depends(get_current_active_user)):
 @app.get("/users/password/hashed")
 def get_hashed_password(password):
     return {'actual_password': password, 'hashed_password': pwd_context.hash(password)}
+
+
+@app.get("/webscrape/test")
+def get_web_scrape_test():
+    web_scrape_handler = WebScrapeHandler()
+    result = web_scrape_handler.check_price()
+    return {'result': result}
 
 
 if __name__ == '__main__':
