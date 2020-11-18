@@ -1,26 +1,44 @@
 # 1. Library imports
 import json
+import sys
+import traceback
 
 import uvicorn
+import logging
+import loguru
 
-from fastapi import Depends, FastAPI, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm, HTTPBearer
+from fastapi import Depends, FastAPI, HTTPException, status, Request
+from fastapi.security import OAuth2PasswordRequestForm, HTTPBearer
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
 from jose import jwt, JWTError
 from passlib.context import CryptContext
 from datetime import timedelta
-from authorization.apitokenmanager import Token, TokenData, TokenCoreManager
-from data_model.userdata import User, UserCoreModel
-from app_configurations.app_settings import AppSetting
-from pydantic import BaseModel
+from loguru import logger
 
+from app_configurations.logging_setup.custom_logging import CustomizeLogger, LogFileViewer
+from authorization.apitokenmanager import Token, TokenData, TokenCoreManager
+from app_configurations.app_settings import AppSetting
+from controller.user.userdata import UserCoreModel, User
 from web_scrape_module.web_scrape_handler import WebScrapeHandler
 
 app_settings = AppSetting()
+logger = logging.getLogger(__name__)
+config_path = app_settings.LOG_CONFIG_JSON_FILE
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-# oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 simple_bearer = HTTPBearer()
+templates = Jinja2Templates(directory="templates")
 
-app = FastAPI()
+
+def create_app() -> FastAPI:
+    app_ini = FastAPI(title='CustomLogger', debug=False)
+    logger_ini = CustomizeLogger.make_logger(config_path)
+    app_ini.logger = logger_ini
+    return app_ini
+
+
+app = create_app()
 
 
 async def get_current_user(token: str = Depends(simple_bearer)):
@@ -30,6 +48,7 @@ async def get_current_user(token: str = Depends(simple_bearer)):
         headers={"WWW-Authenticate": "Bearer"},
     )
     try:
+        logger.info("Inside main.py=>get_current_user")
         token_str = token.credentials
         payload = jwt.decode(token_str, app_settings.SECRET_KEY, algorithms=app_settings.ALGORITHM)
         username: str = payload.get("sub")
@@ -37,6 +56,7 @@ async def get_current_user(token: str = Depends(simple_bearer)):
             raise credentials_exception
         token_data = TokenData(username=username)
     except JWTError:
+        logger.error(f'main.py=>get_current_user:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred')
         raise credentials_exception
     user_obj = UserCoreModel()
     user = user_obj.get_user(username=token_data.username)
@@ -52,8 +72,44 @@ async def get_current_active_user(current_user: User = Depends(get_current_user)
 
 
 @app.get('/')
-def index():
-    return {'message': 'Hello, stranger'}
+def index(request: Request):
+    logger.info("main.py=>index")
+    return templates.TemplateResponse("home/index.html", {"request": request})
+
+
+@app.get('/log')
+def view_log_types(request: Request):
+    logger.info("main.py=>view_log_types")
+    log_file_vw = LogFileViewer()
+    log_file_types = log_file_vw.list_log_file_types()
+    context = {'request': request, 'log_file_types': log_file_types}
+    return templates.TemplateResponse("log/index.html", context)
+
+
+@app.get('/log/{log_type_id:int}')
+def get_log_details(request: Request, log_type_id: str):
+    try:
+        print(f"Inside main.py,get_log_details()=>log_type_id:{log_type_id}")
+        logger.info("main.py=>get_all_log_files")
+        log_file_vw = LogFileViewer()
+        file_list_with_path = log_file_vw.get_all_files(log_type_id)
+        context = {'request': request, 'file_list_with_path': file_list_with_path}
+        return templates.TemplateResponse("log/logfiles.html", context)
+    except Exception:
+        logger.error(f'main.py=>get_log_details:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred')
+
+
+@app.get("/log/{file_path:path}")
+async def get_file_content(request: Request, file_path: str):
+    try:
+        log_file_vw = LogFileViewer()
+        file_content = log_file_vw.show_file_content(file_path)
+        file_content = file_content.splitlines(True)
+        print(f"File reading successful:{file_content}")
+        context = {'request': request, 'file_content': file_content, 'file_name': file_path}
+        return templates.TemplateResponse('log/file_content.html', context)
+    except Exception:
+        logger.error(f'main.py=>get_log_details:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred')
 
 
 @app.get('/Get/User/Json')

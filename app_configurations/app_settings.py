@@ -3,3 +3,5 @@ class AppSetting:
     ALGORITHM = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES = 5
     USER_REC_SOURCE_FILE = 'data_model/user.json'
+    LOG_CONFIG_JSON_FILE = 'app_configurations/logging_setup/logging_config.json'
+    LOG_FILE_DIRECTORY = "logs"

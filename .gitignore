@@ -10,3 +10,6 @@
 /.idea
 /web_scrape_module/__pycache__
 /.vs
+/app_configurations/logging_setup/__pycache__
+/controller/user/__pycache__
+/logs
