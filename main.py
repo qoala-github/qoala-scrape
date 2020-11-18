@@ -4,7 +4,7 @@ import sys
 import traceback
 import uvicorn
 import logging
-import loguru
+import requests
 
 from fastapi import Depends, FastAPI, HTTPException, status, Request
 from fastapi.security import OAuth2PasswordRequestForm, HTTPBearer
@@ -13,6 +13,7 @@ from jose import jwt, JWTError
 from passlib.context import CryptContext
 from datetime import timedelta
 from loguru import logger
+from bs4 import BeautifulSoup
 
 from app_configurations.logging_setup.custom_logging import CustomizeLogger, LogFileViewer
 from controller.authorization.api_token_manager import Token, TokenData, TokenCoreManager
@@ -148,9 +149,24 @@ def get_hashed_password(password):
 
 @app.get("/webscrape/test")
 def get_web_scrape_test():
+    """
+    user_agent = app_settings.WEB_SCRAPE_USER_AGENT
+    headers = {"user-agent": user_agent}
+    site_url = 'https://www.adidas.com/us/promotions'
+    req = requests.get(site_url, headers=headers)
+    soup = BeautifulSoup(req.text, "html.parser")
+    ele_list = soup.find_all('h2', attrs={'class': 'title___1vL99 withhtml___3nraa gl-heading--l'})
+    list_obj = [{"tag-data": str(e.text)} for e in ele_list]
+    print(f"list_obj:{list_obj}")
+    json_res = json.dumps(list_obj)
+    print(type(list_obj))
+    """
     web_scrape_handler = WebScrapeHandler()
-    result = web_scrape_handler.check_price()
-    return {'result': result}
+    result = web_scrape_handler.fetch_site_data()
+    print(f"result:{result}")
+    res = json.dumps(result)
+    print(type(result))
+    return {'result': res}
 
 
 if __name__ == '__main__':
