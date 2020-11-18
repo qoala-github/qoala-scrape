@@ -10,7 +10,7 @@ from typing import Optional
 from pydantic import BaseModel
 from passlib.context import CryptContext
 from app_configurations.app_settings import AppSetting
-from authorization.apitokenmanager import TokenData
+from controller.authorization.api_token_manager import TokenData
 
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")

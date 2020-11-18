@@ -2,15 +2,12 @@
 import json
 import sys
 import traceback
-
 import uvicorn
 import logging
 import loguru
 
 from fastapi import Depends, FastAPI, HTTPException, status, Request
 from fastapi.security import OAuth2PasswordRequestForm, HTTPBearer
-from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from jose import jwt, JWTError
 from passlib.context import CryptContext
@@ -18,10 +15,10 @@ from datetime import timedelta
 from loguru import logger
 
 from app_configurations.logging_setup.custom_logging import CustomizeLogger, LogFileViewer
-from authorization.apitokenmanager import Token, TokenData, TokenCoreManager
+from controller.authorization.api_token_manager import Token, TokenData, TokenCoreManager
 from app_configurations.app_settings import AppSetting
-from controller.user.userdata import UserCoreModel, User
-from web_scrape_module.web_scrape_handler import WebScrapeHandler
+from controller.user.user_data import UserCoreModel, User
+from controller.web_scrape_module.web_scrape_handler import WebScrapeHandler
 
 app_settings = AppSetting()
 logger = logging.getLogger(__name__)
@@ -32,7 +29,7 @@ templates = Jinja2Templates(directory="templates")
 
 
 def create_app() -> FastAPI:
-    app_ini = FastAPI(title='CustomLogger', debug=False)
+    app_ini = FastAPI(title='Qoala Web Scrape API-Documentation', debug=False)
     logger_ini = CustomizeLogger.make_logger(config_path)
     app_ini.logger = logger_ini
     return app_ini
