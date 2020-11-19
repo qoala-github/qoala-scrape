@@ -467,7 +467,7 @@
   {
     "site_no": "16",
     "site_name": "skyscanner",
-    "site_url": ["https://www.skyscanner.net/news/deals/cyber-monday-deals"],
+    "site_url": ["https://www.skyscanner.com/tips-and-inspiration/deals/daily-flights-deals"],
     "site_host": "skyscanner",
      "web_scrape_key_elements": [
       {
