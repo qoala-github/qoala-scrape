@@ -6,32 +6,27 @@
     "site_host": "adidas",
     "web_scrape_key_elements": [
       {
-        "tag_name": "h2",
-        "property_filter": [
-          {
-            "prop_val": "id",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                              ]
-          }
-        ]
+        "text_type": "description",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-        "property_filter": [
-          {
-            "prop_val": "id",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                              ]
-          }
-        ]
+        "text_type": "code",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -42,32 +37,27 @@
     "site_host": "asos",
     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-        "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-        "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -78,32 +68,27 @@
     "site_host": "booking",
     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-        "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute":[
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -112,34 +97,29 @@
     "site_name": "decathlon",
     "site_url": ["https://www.decathlon.my/page/promotions.html"],
     "site_host": "decathlon",
-    "web_scrape_key_elements": [
+     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -148,34 +128,29 @@
     "site_name": "elcorteingles",
     "site_url": ["https://www.elcorteingles.com/en/prices-worth-celebrating/"],
     "site_host": "elcorteingles",
-    "web_scrape_key_elements": [
+     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-        "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -186,32 +161,27 @@
     "site_host": "fnac",
     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-        "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -220,34 +190,29 @@
     "site_name": "gearbest",
     "site_url": ["https://www.gearbest.com/promotion-collection-special-8117.html"],
     "site_host": "gearbest",
-    "web_scrape_key_elements": [
+   "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-        "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-        "property_filter":  [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -256,34 +221,29 @@
     "site_name": "ikea",
     "site_url": ["https://www.ikea.com/my/en/campaigns/"],
     "site_host": "ikea",
-    "web_scrape_key_elements": [
+     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-        "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-        "property_filter":  [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -292,34 +252,29 @@
     "site_name": "joom",
     "site_url": ["https://www.joom.com/en/promotions/5d12164c8b45130001718939"],
     "site_host": "joom",
-    "web_scrape_key_elements": [
+     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -328,34 +283,29 @@
     "site_name": "leroymerlin",
     "site_url": ["https://leroymerlin.co.za/explore-promotions"],
     "site_host": "leroymerlin",
-    "web_scrape_key_elements": [
+     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -364,34 +314,29 @@
     "site_name": "mediamarkt",
     "site_url": ["https://www.mediamarkt.be/fr/shop/flyer.html"],
     "site_host": "mediamarkt",
-    "web_scrape_key_elements": [
+     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-      "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-        "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -400,34 +345,29 @@
     "site_name": "Nike",
     "site_url": ["https://www.nike.com/promo-code"],
     "site_host": "nike",
-    "web_scrape_key_elements": [
+     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-        "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute":[
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -436,34 +376,29 @@
     "site_name": "playstation",
     "site_url": ["https://www.playstation.com/en-us/network/legal/promotions/"],
     "site_host": "playstation",
-    "web_scrape_key_elements": [
+     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-        "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -472,34 +407,29 @@
     "site_name": "ryanair",
     "site_url": ["https://www.ryanair.com/gb/en/plan-trip/explore/promotions"],
     "site_host": "ryanair",
-    "web_scrape_key_elements": [
+     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -508,34 +438,29 @@
     "site_name": "samsung",
     "site_url": ["https://www.samsung.com/us/promotions/"],
     "site_host": "samsung",
-    "web_scrape_key_elements": [
+     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -544,34 +469,29 @@
     "site_name": "skyscanner",
     "site_url": ["https://www.skyscanner.net/news/deals/cyber-monday-deals"],
     "site_host": "skyscanner",
-    "web_scrape_key_elements": [
+     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-        "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute":[
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -580,34 +500,29 @@
     "site_name": "supermercadosdia",
     "site_url": ["https://www.supermercadosdia.com.ar/"],
     "site_host": "supermercadosdia",
-    "web_scrape_key_elements": [
+     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-      "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -618,32 +533,27 @@
     "site_host": "knoji",
     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -652,34 +562,29 @@
     "site_name": "zalando",
     "site_url": ["https://www.zalando.fr/promo-femme/"],
     "site_host": "zalando",
-    "web_scrape_key_elements": [
+     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   },
@@ -688,34 +593,29 @@
     "site_name": "zara",
     "site_url": ["https://www.zara.com/ww/#utm_referrer=https%3A%2F%2Fwww.google.com%2F"],
     "site_host": "zara",
-    "web_scrape_key_elements": [
+     "web_scrape_key_elements": [
       {
-        "tag_name": "a",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "description",
+       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       },
       {
-        "tag_name": "div",
-       "property_filter": [
-          {
-            "prop_val": "href",
-            "prop_attribute": [
-                               {"text_type":"description","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"code","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"terms","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]},
-                               {"text_type":"expiry","prop_list":[{"prop":"class","search_key":"_3wU53n"},{"prop":"class","search_key":"_3wU53n"}]}
-                             ]
-          }
-        ]
+        "text_type": "code",
+       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },{
+        "text_type": "terms",
+        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
+      },
+      {
+        "text_type": "expiry",
+       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
+                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
+                       ]
       }
     ]
   }
