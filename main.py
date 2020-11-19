@@ -147,8 +147,8 @@ def get_hashed_password(password):
     return {'actual_password': password, 'hashed_password': pwd_context.hash(password)}
 
 
-@app.get("/webscrape/test")
-def get_web_scrape_test():
+@app.post("/web_scrape/send")
+def fetch_and_send_web_scrape_data():
     """
     user_agent = app_settings.WEB_SCRAPE_USER_AGENT
     headers = {"user-agent": user_agent}
@@ -162,11 +162,12 @@ def get_web_scrape_test():
     print(type(list_obj))
     """
     web_scrape_handler = WebScrapeHandler()
-    result = web_scrape_handler.fetch_site_data()
+    result = web_scrape_handler.send_promotion_data()
     print(f"result:{result}")
-    res = json.dumps(result)
-    print(type(result))
-    return {'result': res}
+    # pre_res = json.loads(result)
+    # pos_res = json.dumps(pre_res)
+    # print(type(pos_res))
+    return {'result': result}
 
 
 if __name__ == '__main__':

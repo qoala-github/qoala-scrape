@@ -1,0 +1,14 @@
+{
+  "description": {
+    "keyword_list": ["promotion","promotions","deals","deal","coupon", "coupons", "offer", "offers","off"]
+  },
+   "code": {
+    "keyword_list": ["coupon code","promo code","coupon codes","promo codes"]
+  },
+  "terms": {
+    "keyword_list": ["terms","conditions","terms and conditions","terms & conditions","valid","valid until","valid till"]
+  },
+  "expiry": {
+    "keyword_list": ["expires","expiry","expire","expiration","expired"]
+  }
+}
