@@ -8,31 +8,7 @@
         "site_url": "https://www.adidas.com/us/promotions",
         "scrape_filters": [
           {
-            "text_type": "description",
-            "property_filter": [
-              {
-                "parent_node": {
-                  "tag_name": "div",
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N col-s-12 col-m-6 col-l-8 col-l-10 col-xl-8"
-                },
-                "prop_list": [
-                  {
-                    "tag_name": "h2",
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "tag_name": "h2",
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "code",
+
             "property_filter": [
               {
                 "parent_node": {
@@ -42,103 +18,65 @@
                 },
                 "prop_list": [
                   {
-                    "tag_name": "div",
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "tag_name": "div",
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "parent_node": {
-                  "tag_name": "h2",
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
+                    "text_type": "description",
                     "tag_name": "h2",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  ["title___1vL99", "withhtml___3nraa" ,"gl-heading--l"]
                   },
                   {
-                    "tag_name": "h2",
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": ["summary___37JYH","gl-body--l", "withhtml___3nraa"]
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": ["summary___37JYH","gl-body--l", "withhtml___3nraa"]
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  ["summary___37JYH","gl-body--l", "withhtml___3nraa"]
                   }
                 ]
               },
-              {
+               {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "gl-product-card"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "gl-badge"
                   },
                   {
+                    "text_type": "code",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": "gl-badge"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "gl-badge"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "gl-badge"
                   }
                 ]
               }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "parent_node": {
-                  "tag_name": "h2",
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "tag_name": "h2",
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "tag_name": "h2",
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "parent_node": {
-                  "tag_name": "div",
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "tag_name": "div",
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "tag_name": "div",
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
+
             ]
           }
         ]
@@ -149,127 +87,43 @@
     "site_no": "2",
     "site_name": "asos",
     "site_host": "asos",
-     "web_scrape_key_elements":[
+    "web_scrape_key_elements":[
       {
-        "site_url": "https://www.asos.com/?channelref=paid+search&affid=12496&ppcadref=9826306283%7c98328406045%7ckwd-297372148208&gclid=CjwKCAiAzNj9BRBDEiwAPsL0d-TS7a-nhxYzmVaBS1SGEy47dMHLOq6YahXb8Kinj7OviWh7wX5fzBoCeTIQAvD_BwE&gclsrc=aw.ds",
+        "site_url": "https://www.asos.com/?channelref=paid+search&affid=12496&ppcadref=9826306283%7c98328406045%7ckwd-297372148208&gclid=CjwKCAiA7939BRBMEiwA-hX5J4VOsBJ_1Mqyp_dWtkRwypbfnUjFC0kVNxpp6YGm2fz3iJs93oOQdRoCUwEQAvD_BwE&gclsrc=aw.ds",
         "scrape_filters": [
           {
-            "text_type": "description",
+
             "property_filter": [
               {
-                "tag_name": "h2",
                 "parent_node": {
+                  "tag_name": "section",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "src-GlobalBanner-GlobalBanner_globalBanner"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key": "src-GlobalBanner-Content-Content_copy"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key": "src-GlobalBanner-Content-Content_copy"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key": "src-GlobalBanner-Tooltip-Tooltip_tooltip"
                   },
                   {
+                    "text_type": "expiry",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": "src-GlobalBanner-Tooltip-Tooltip_tooltip"
                   }
                 ]
               }
@@ -285,125 +139,41 @@
     "site_host": "booking",
     "web_scrape_key_elements":[
       {
-        "site_url":"https://www.booking.com/index.html?aid=309654;label=booking-be-en-ausnz-bJBCeRsgTQ0TizKsbO3PpAS460970376600:pl:ta:p1:p22,563,000:ac:ap:neg:fi:tikwd-26750733231:lp1009919:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YcsZ-Id2vkzIfTmYhvC5HOg;ws=&gclid=EAIaIQobChMIt-SUyZ6J7QIVyamWCh1amQcKEAAYAyAAEgJ7zvD_BwE",
+        "site_url": "https://www.adidas.com/us/promotions",
         "scrape_filters": [
           {
-            "text_type": "description",
+
             "property_filter": [
               {
-                "tag_name": "h2",
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
                   "search_key": "poster_content___39q_N"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "h2",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "title___1vL99 withhtml___3nraa gl-heading--l"
                   },
                   {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
                     "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
                   },
                   {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
                     "prop": "class",
                     "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
                   },
                   {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
                     "prop": "class",
                     "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
                   }
                 ]
               }
