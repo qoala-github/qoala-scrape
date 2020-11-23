@@ -139,41 +139,41 @@
     "site_host": "booking",
     "web_scrape_key_elements":[
       {
-        "site_url": "https://www.adidas.com/us/promotions",
+        "site_url": "https://www.booking.com/dealspage.en-us.html?slc=d1;aid=378266;label=sl-en-us-deal-gJ5VcBtZmwJpmGZaurzm0AS267778093627:pl:ta:p1:p22,563,000:ac:ap:neg:fi54112905013:tikwd-488842039672:lp1009919:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YYriJK-Ikd_dLBPOo0BdMww;ws=&gclid=CjwKCAiA2O39BRBjEiwApB2IkiB9gpYm6JgsyJU3tmdOxjLkXo1qi75blwiL5nZUD7WIrdw9CVujrRoC9eYQAvD_BwE",
         "scrape_filters": [
           {
 
             "property_filter": [
               {
                 "parent_node": {
-                  "tag_name": "div",
+                  "tag_name": "p",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "bui-card__text deal-price-card deal-price-card__campaign-2019"
                 },
                 "prop_list": [
                   {
                     "text_type": "description",
-                    "tag_name": "h2",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key":  "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "bui-badge__text"
                   },
                   {
                     "text_type": "code",
-                    "tag_name": "div",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "bui-badge__text"
                   },
                   {
                     "text_type": "terms",
-                    "tag_name": "div",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "deal-price-card"
                   },
                   {
                     "text_type": "expiry",
-                    "tag_name": "div",
+                     "tag_name": "span",
                     "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "bui-badge__text"
                   }
                 ]
               }
