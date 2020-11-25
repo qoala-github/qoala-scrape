@@ -171,4 +171,5 @@ def fetch_and_send_web_scrape_data():
 
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='127.0.0.1', port=8000)
+    uvicorn.run(app)
+    #uvicorn.run(app, host=app_settings.SITE_HOST, port=app_settings.SITE_HOST_PORT)

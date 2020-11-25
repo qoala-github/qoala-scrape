@@ -1,20 +1,12 @@
 import sys
 import traceback
 import requests
-import re
 import json
-import pandas as pd
 import logging
-import platform
+
 
 from bs4 import BeautifulSoup
 from requests import Response
-from PyQt5.QtWidgets import QApplication
-from PyQt5.QtCore import QUrl
-from PyQt5.QtWebEngineWidgets import QWebEngineView
-from PyQt5.QtWebEngineWidgets import QWebEnginePage
-from lxml import html
-
 from app_configurations.app_settings import AppSetting
 
 app_settings = AppSetting()
@@ -31,24 +23,6 @@ with open(app_settings.COMPANY_SITE_DETAILS_JSON_FILE) as f:
     company_json = json.load(f)
 
 
-class Page(QWebEnginePage):
-    def __init__(self, url):
-        self.app = QApplication(sys.argv)
-        QWebEnginePage.__init__(self)
-        self.html = ''
-        self.loadFinished.connect(self._on_load_finished)
-        self.load(QUrl(url))
-        self.app.exec_()
-
-    def _on_load_finished(self):
-        self.html = self.toHtml(self.Callable)
-        print('Load finished')
-
-    def Callable(self, html_str):
-        self.html = html_str
-        self.app.quit()
-
-
 class WebScrapeHandler:
 
     def fetch_site_data(self):
@@ -60,7 +34,7 @@ class WebScrapeHandler:
             main_list = []
             site_coupon_list = []
             company_list = []
-            data_count = 3  # len(company_json)
+            data_count = 7  # len(company_json)
             for csl in range(data_count):
                 company_list.append(company_json[csl])
 
@@ -68,8 +42,6 @@ class WebScrapeHandler:
                 try:
                     com_obj = company_list[c]
                     print(com_obj)
-                    site_urls = com_obj.get('site_url')
-                    comp_id = com_obj.get('site_no')
                     site_name = com_obj.get('site_name')
                     site_host = com_obj.get('site_host')
                     target_elem = com_obj.get('web_scrape_key_elements')
@@ -284,9 +256,7 @@ class WebScrapeHandler:
                     msg = "Se produjo un error al publicar los datos del web scrape"
                     print(msg)
                     logger.error(msg)
-                    logger.error(msg)
                     return Response({f"Message:{msg}"}, status=400)
-
         except Exception:
             msg = f'WebScrapeHandler=>send_promotion_data()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
             print(msg)

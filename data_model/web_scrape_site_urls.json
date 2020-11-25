@@ -192,122 +192,38 @@
         "site_url":"https://www.decathlon.my/page/promotions.html",
         "scrape_filters": [
           {
-            "text_type": "description",
+
             "property_filter": [
               {
-                "tag_name": "h2",
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "promo-card"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "card-title"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "card-title"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "card-title"
                   },
                   {
+                    "text_type": "expiry",
+                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  "promo-date"
                   }
                 ]
               }
@@ -324,124 +240,40 @@
     "web_scrape_key_elements":[
       {
         "site_url":"https://www.elcorteingles.com/en/prices-worth-celebrating/",
-        "scrape_filters": [
+         "scrape_filters": [
           {
-            "text_type": "description",
+
             "property_filter": [
               {
-                "tag_name": "h2",
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "info"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "product-name"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "sale"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "discount"
                   },
                   {
+                    "text_type": "expiry",
+                     "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  "discount"
                   }
                 ]
               }
@@ -458,124 +290,40 @@
     "web_scrape_key_elements":[
       {
         "site_url": "https://www.fnac.com/destockage/",
-        "scrape_filters": [
+         "scrape_filters": [
           {
-            "text_type": "description",
+
             "property_filter": [
               {
-                "tag_name": "h2",
                 "parent_node": {
+                  "tag_name": "li",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "promo-ListItem"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "promo-ListItemLabel"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "promo-ListItemLabel"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "promo-ListItemLabel"
                   },
                   {
+                    "text_type": "expiry",
+                     "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  "promo-ListItemLabel"
                   }
                 ]
               }
@@ -591,125 +339,41 @@
     "site_host": "gearbest",
     "web_scrape_key_elements":[
       {
-        "site_url": "https://www.gearbest.com/promotion-collection-special-8117.html",
+        "site_url": "https://www.gearbest.com/coupon.html",
         "scrape_filters": [
           {
-            "text_type": "description",
+
             "property_filter": [
               {
-                "tag_name": "h2",
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "compItem_a3"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "compItem_titleWrap"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "compItem_couponHandle"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "compItem_couponLeft"
                   },
                   {
+                    "text_type": "expiry",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  "compItem_couponLeft"
                   }
                 ]
               }
