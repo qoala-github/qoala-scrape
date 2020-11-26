@@ -148,7 +148,7 @@ def get_hashed_password(password):
 
 
 @app.post("/web_scrape/send")
-def fetch_and_send_web_scrape_data():
+async def fetch_and_send_web_scrape_data():
     """
     user_agent = app_settings.WEB_SCRAPE_USER_AGENT
     headers = {"user-agent": user_agent}
@@ -162,7 +162,7 @@ def fetch_and_send_web_scrape_data():
     print(type(list_obj))
     """
     web_scrape_handler = WebScrapeHandler()
-    result = web_scrape_handler.send_promotion_data()
+    result = await web_scrape_handler.send_promotion_data()
     print(f"result:{result}")
     # pre_res = json.loads(result)
     # pos_res = json.dumps(pre_res)

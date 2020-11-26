@@ -4,10 +4,10 @@ import requests
 import json
 import logging
 
-
 from bs4 import BeautifulSoup
 from requests import Response
 from app_configurations.app_settings import AppSetting
+from selenium import webdriver
 
 app_settings = AppSetting()
 logger = logging.getLogger(__name__)
@@ -22,19 +22,25 @@ company_json = None
 with open(app_settings.COMPANY_SITE_DETAILS_JSON_FILE) as f:
     company_json = json.load(f)
 
+web_driver_path = app_settings.SELENIUM_WEB_DRIVER_PATH
+options = webdriver.FirefoxOptions()
+# options.add_argument('-headless')
+page_load_timeout = app_settings.SITE_LOAD_TIMEOUT
+
 
 class WebScrapeHandler:
 
-    def fetch_site_data(self):
+    async def fetch_site_data(self):
         loop_ref = ""
         try:
+
             user_agent = app_settings.WEB_SCRAPE_USER_AGENT
             headers = {"user-agent": user_agent}
             max_redirects = int(app_settings.SITE_URL_MAX_REDIRECTS)
             main_list = []
             site_coupon_list = []
             company_list = []
-            data_count = 7  # len(company_json)
+            data_count = 10  # len(company_json)
             for csl in range(data_count):
                 company_list.append(company_json[csl])
 
@@ -55,6 +61,7 @@ class WebScrapeHandler:
                         scrape_filters = target_elem_obj.get('scrape_filters')
 
                         # extract the html content from URL
+                        """
                         session_ini = requests.Session()
                         session_ini.max_redirects = max_redirects
                         session_ini.headers['User-Agent'] = user_agent
@@ -62,6 +69,8 @@ class WebScrapeHandler:
                         # req = requests.get(site_url, headers=headers)
                         # print(f"{c}:{req.text}")
                         soup = BeautifulSoup(req.content, "html5lib")
+                        """
+                        soup = await self.get_html_content(site_url)
 
                         for sf in range(len(scrape_filters)):
                             prop_filter_list = scrape_filters[sf].get('property_filter')
@@ -107,6 +116,9 @@ class WebScrapeHandler:
                                             terms = el_obj.find(terms_tag_name, terms_attr)
                                             expiry = el_obj.find(exp_tag_name, exp_attr)
 
+                                            if site_url == 'https://www.gearbest.com/coupon.html':
+                                                print(f"ayyo=>description:{description},coupon_code:{coupon_code}")
+
                                             descr_text = self.get_description(
                                                 description.text) if description is not None else ""
                                             cc_text = self.get_coupon_code(
@@ -114,6 +126,9 @@ class WebScrapeHandler:
                                             terms_text = self.get_terms(terms.text) if terms is not None else ""
                                             exp_text = self.get_expiry_date(
                                                 expiry.text) if expiry is not None else "2020-12-31T00:00:00Z"
+
+                                            if site_url == 'https://www.gearbest.com/coupon.html':
+                                                print(f"ayyo=>descr_text:{descr_text},cc_text:{cc_text}")
 
                                             if len(cc_text) > 0 or len(descr_text) > 0:
                                                 site_coupon_list.append(
@@ -133,6 +148,21 @@ class WebScrapeHandler:
             return main_list
         except Exception:
             msg = f'WebScrapeHandler=>fetch_site_data()=>before_loop=>{loop_ref}:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
+            print(msg)
+            logger.error(msg)
+
+    async def get_html_content(self, site_url):
+        try:
+            driver = webdriver.Firefox(executable_path=web_driver_path,
+                                       firefox_options=options)
+            driver.set_page_load_timeout(page_load_timeout)
+            driver.get(site_url)
+            html_content = driver.page_source
+            driver.quit()
+            soup = BeautifulSoup(html_content, "html.parser")
+            return soup
+        except Exception:
+            msg = f'WebScrapeHandler=>get_html_content()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
             print(msg)
             logger.error(msg)
 
@@ -189,8 +219,8 @@ class WebScrapeHandler:
             result = ""
             if descr_text is not None:
                 data_keys = promo_keyword_json["description"].get('keyword_list')
-                result = descr_text if self.is_keyword_found(data_keys, descr_text.lower()) else ""
-            return result
+                result = descr_text  # descr_text if self.is_keyword_found(data_keys, descr_text.lower()) else ""
+            return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
             msg = f'WebScrapeHandler=>get_description()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
             print(msg)
@@ -201,8 +231,10 @@ class WebScrapeHandler:
             result = ""
             if coupon_code_text is not None:
                 data_keys = promo_keyword_json["coupon_code"].get('keyword_list')
+                invalid_data_keys = promo_keyword_json["coupon_code"].get('keyword_list')
                 result = coupon_code_text if self.is_keyword_found(data_keys, coupon_code_text.lower()) else ""
-            return result
+                result = "" if self.is_keyword_found(invalid_data_keys, result.lower()) else result
+            return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
             msg = f'WebScrapeHandler=>get_coupon_code()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
             print(msg)
@@ -215,7 +247,7 @@ class WebScrapeHandler:
             if terms_text is not None:
                 data_keys = promo_keyword_json["terms"].get('keyword_list')
                 result = terms_text if self.is_keyword_found(data_keys, terms_text.lower()) else ""
-            return result
+            return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
             msg = f'WebScrapeHandler=>get_terms()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
             print(msg)
@@ -227,15 +259,15 @@ class WebScrapeHandler:
             if exp_date_text is not None:
                 data_keys = promo_keyword_json["expiry"].get('keyword_list')
                 result = "2020-12-31T00:00:00Z" if self.is_keyword_found(data_keys, exp_date_text) else ""
-                return result
+                return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
             msg = f'WebScrapeHandler=>get_expiry_date()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
             print(msg)
             logger.error(msg)
 
-    def send_promotion_data(self):
+    async def send_promotion_data(self):
         try:
-            result = self.fetch_site_data()
+            result = await self.fetch_site_data()
             res = json.dumps(result)
 
             # login to client API and get token

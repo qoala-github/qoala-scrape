@@ -89,16 +89,16 @@
     "site_host": "asos",
     "web_scrape_key_elements":[
       {
-        "site_url": "https://www.asos.com/?channelref=paid+search&affid=12496&ppcadref=9826306283%7c98328406045%7ckwd-297372148208&gclid=CjwKCAiA7939BRBMEiwA-hX5J4VOsBJ_1Mqyp_dWtkRwypbfnUjFC0kVNxpp6YGm2fz3iJs93oOQdRoCUwEQAvD_BwE&gclsrc=aw.ds",
+        "site_url": "https://www.asos.com",
         "scrape_filters": [
           {
 
             "property_filter": [
               {
                 "parent_node": {
-                  "tag_name": "section",
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "src-GlobalBanner-GlobalBanner_globalBanner"
+                  "search_key": "src-GlobalBanner-Column-Column_column"
                 },
                 "prop_list": [
                   {
@@ -115,13 +115,13 @@
                   },
                   {
                     "text_type": "terms",
-                    "tag_name": "span",
+                    "tag_name": "div",
                     "prop": "class",
                     "search_key": "src-GlobalBanner-Tooltip-Tooltip_tooltip"
                   },
                   {
                     "text_type": "expiry",
-                    "tag_name": "span",
+                    "tag_name": "div",
                     "prop": "class",
                     "search_key": "src-GlobalBanner-Tooltip-Tooltip_tooltip"
                   }
@@ -330,6 +330,49 @@
             ]
           }
         ]
+      },
+      {
+        "site_url": "https://www.fnac.com/choisir-carte#bl=marktlink5",
+         "scrape_filters": [
+          {
+
+            "property_filter": [
+              {
+                "parent_node": {
+                  "tag_name": "li",
+                  "prop": "class",
+                  "search_key": "wbmktCarte-item"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "promo-ListItemLabel"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "wbmktCarte-blkDescription"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "wbmktCarte-blkDescription"
+                  },
+                  {
+                    "text_type": "expiry",
+                     "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "wbmktCarte-blkDescription"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -359,9 +402,9 @@
                   },
                   {
                     "text_type": "code",
-                    "tag_name": "div",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key":  "compItem_couponHandle"
+                    "search_key":  "compItem_couponCode"
                   },
                   {
                     "text_type": "terms",
@@ -392,122 +435,38 @@
         "site_url":"https://www.ikea.com/my/en/campaigns/",
         "scrape_filters": [
           {
-            "text_type": "description",
+
             "property_filter": [
               {
-                "tag_name": "h2",
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "g1ci6p1l vz2frqh v18by0fb"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "i76mo33 pub__designSystemText t91kxqv w1fdzi2f"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "i76mo33 pub__designSystemText t91kxqv w1fdzi2f"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "i76mo33 pub__designSystemText t91kxqv w1fdzi2f"
                   },
                   {
+                    "text_type": "expiry",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  "i76mo33 pub__designSystemText t91kxqv w1fdzi2f"
                   }
                 ]
               }
@@ -523,125 +482,85 @@
     "site_host": "joom",
     "web_scrape_key_elements":[
       {
-        "site_url": "https://www.joom.com/en/promotions/5d12164c8b45130001718939",
-        "scrape_filters": [
+        "site_url": "https://www.joom.com/en/promotions/5b4f355c1436d41e50f40c23",
+       "scrape_filters": [
           {
-            "text_type": "description",
+
             "property_filter": [
               {
-                "tag_name": "h2",
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "text___p6jU6"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "subtitle___oHQJ0"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  "title___2-V6Q"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "title___2-V6Q"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "title___2-V6Q"
                   }
                 ]
               }
             ]
-          },
+          }
+        ]
+      },
+
+      {
+        "site_url": "https://www.joom.com/en/promotions/5b4f355c1436d41e50f40c23",
+       "scrape_filters": [
           {
-            "text_type": "code",
+
             "property_filter": [
               {
-                "tag_name": "div",
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "product___2miP_ product___1h68n"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "name___1aqk8"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "discountBadge___miV5Y"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "badge___164Qm"
                   },
                   {
+                    "text_type": "expiry",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  "badge___164Qm"
                   }
                 ]
               }
@@ -657,125 +576,41 @@
     "site_host": "leroymerlin",
     "web_scrape_key_elements":[
       {
-        "site_url": "https://leroymerlin.co.za/explore-promotions",
-        "scrape_filters": [
+        "site_url": "https://codepromo.lexpress.fr/code-promo-leroy-merlin",
+       "scrape_filters": [
           {
-            "text_type": "description",
+
             "property_filter": [
               {
-                "tag_name": "h2",
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "lexpress-voucher-content"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "lexpress-voucher-title-link"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "lexpress-voucher-title-link"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "lexpress-voucher-title-link"
                   },
                   {
+                    "text_type": "expiry",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  "lexpress-voucher-title-link"
                   }
                 ]
               }
