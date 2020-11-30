@@ -1,45 +1,45 @@
 [
-  {
-    "site_no": "7",
-    "site_name": "gearbest",
-    "site_host": "gearbest",
+   {
+    "site_no": "13",
+    "site_name": "playstation",
+    "site_host": "playstation",
     "web_scrape_key_elements":[
       {
-        "site_url": "https://www.gearbest.com/coupon.html",
-        "scrape_filters": [
+        "site_url": "https://store.playstation.com/en-us/deals",
+       "scrape_filters": [
           {
 
             "property_filter": [
               {
                 "parent_node": {
-                  "tag_name": "div",
+                  "tag_name": "section",
                   "prop": "class",
-                  "search_key": "compItem_a3"
+                  "search_key": "ems-sdk-product-tile__details"
                 },
                 "prop_list": [
                   {
                     "text_type": "description",
-                    "tag_name": "div",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key":  "compItem_titleWrap"
+                    "search_key":  "body-2 truncate-text-2 psw-p-t-2xs"
                   },
                   {
                     "text_type": "code",
-                    "tag_name": "span",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key":  "compItem_couponCode"
+                    "search_key":  "discount-badge__container psw-l-anchor"
                   },
                   {
                     "text_type": "terms",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key":  "compItem_couponLeft"
+                    "search_key":  "discount-badge__container psw-l-anchor"
                   },
                   {
                     "text_type": "expiry",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key":  "compItem_couponLeft"
+                    "search_key":  "discount-badge__container psw-l-anchor"
                   }
                 ]
               }

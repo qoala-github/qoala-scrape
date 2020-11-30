@@ -624,127 +624,43 @@
     "site_no": "11",
     "site_name": "mediamarkt",
     "site_host": "mediamarkt",
-    "web_scrape_key_elements":[
+     "web_scrape_key_elements":[
       {
         "site_url": "https://www.mediamarkt.be/fr/shop/flyer.html",
         "scrape_filters": [
           {
-            "text_type": "description",
+
             "property_filter": [
               {
-                "tag_name": "h2",
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "promo-content"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "p",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  ""
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "h2",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  ""
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "p",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  ""
                   },
                   {
+                    "text_type": "expiry",
+                    "tag_name": "p",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  ""
                   }
                 ]
               }
@@ -758,127 +674,128 @@
     "site_no": "12",
     "site_name": "Nike",
     "site_host": "nike",
-    "web_scrape_key_elements":[
+   "web_scrape_key_elements":[
       {
         "site_url": "https://www.nike.com/promo-code",
         "scrape_filters": [
           {
-            "text_type": "description",
+
             "property_filter": [
               {
-                "tag_name": "h2",
                 "parent_node": {
+                  "tag_name": "figure",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "image-card _3l8ZuNi4"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "_3T7SP3hk"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  "_3T7SP3hk"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "_3T7SP3hk"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "_3T7SP3hk"
                   }
                 ]
               }
             ]
-          },
+          }
+        ]
+      },
+       {
+        "site_url": "https://www.nike.com/w/cyber-monday-95xas",
+        "scrape_filters": [
           {
-            "text_type": "code",
+
             "property_filter": [
               {
-                "tag_name": "div",
                 "parent_node": {
+                  "tag_name": "header",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "wall-header"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "h1",
                     "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "wall-header__title"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "h1",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  "wall-header__title"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key":  "wall-header__title"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key":  "wall-header__title"
                   }
                 ]
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "site_url": "https://www.nike.com/",
+        "scrape_filters": [
           {
-            "text_type": "terms",
             "property_filter": [
               {
-                "tag_name": "h2",
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "swiper-wrapper"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "_2vXfoh-O"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "_8gPPHhHw"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "_8gPPHhHw"
                   },
                   {
+                    "text_type": "expiry",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  "_8gPPHhHw"
                   }
                 ]
               }
@@ -892,127 +809,43 @@
     "site_no": "13",
     "site_name": "playstation",
     "site_host": "playstation",
-    "web_scrape_key_elements":[
+     "web_scrape_key_elements":[
       {
-        "site_url": "https://www.playstation.com/en-us/network/legal/promotions/",
-        "scrape_filters": [
+        "site_url": "https://store.playstation.com/en-us/deals",
+       "scrape_filters": [
           {
-            "text_type": "description",
+
             "property_filter": [
               {
-                "tag_name": "h2",
                 "parent_node": {
+                  "tag_name": "section",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "ems-sdk-product-tile__details"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "body-2 truncate-text-2 psw-p-t-2xs"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "discount-badge__container psw-l-anchor"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "discount-badge__container psw-l-anchor"
                   },
                   {
+                    "text_type": "expiry",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  "discount-badge__container psw-l-anchor"
                   }
                 ]
               }

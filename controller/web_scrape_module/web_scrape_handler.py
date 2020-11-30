@@ -40,7 +40,7 @@ class WebScrapeHandler:
             main_list = []
             site_coupon_list = []
             company_list = []
-            data_count = 10  # len(company_json)
+            data_count = 1  # len(company_json)
             for csl in range(data_count):
                 company_list.append(company_json[csl])
 
@@ -232,8 +232,8 @@ class WebScrapeHandler:
             if coupon_code_text is not None:
                 data_keys = promo_keyword_json["coupon_code"].get('keyword_list')
                 invalid_data_keys = promo_keyword_json["coupon_code"].get('keyword_list')
-                result = coupon_code_text if self.is_keyword_found(data_keys, coupon_code_text.lower()) else ""
-                result = "" if self.is_keyword_found(invalid_data_keys, result.lower()) else result
+                #result = coupon_code_text if self.is_keyword_found(data_keys, coupon_code_text.lower()) else ""
+                result = "" if self.is_keyword_found(invalid_data_keys, coupon_code_text.lower()) else coupon_code_text
             return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
             msg = f'WebScrapeHandler=>get_coupon_code()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
@@ -327,7 +327,7 @@ class WebScrapeHandler:
             msg = f"Inside publish_script_tag()=>auth_token={auth_token}"
             print(msg)
             logger.info(msg)
-            req_url = f"{app_settings}post_web_scrapes"
+            req_url = f"{app_settings}brands"
             msg = f"req_url:{req_url}"
             print(msg)
             logger.info(msg)
