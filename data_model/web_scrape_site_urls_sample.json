@@ -1,50 +1,121 @@
 [
-   {
-    "site_no": "13",
-    "site_name": "playstation",
-    "site_host": "playstation",
-    "web_scrape_key_elements":[
+  {
+    "site_no": "14",
+    "site_name": "skyscanner",
+    "site_host": "skyscanner",
+    "web_scrape_key_elements": [
       {
-        "site_url": "https://store.playstation.com/en-us/deals",
-       "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+        "site_url": "https://www.skyscanner.com/tips-and-inspiration/deals/daily-flights-deals",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "single-post__main_content"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "single-post__summary entry-summary"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "single-post__summary entry-summary"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "single-post__summary entry-summary"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "single-post__summary entry-summary"
+                  }
+                ]
+              }
+        ]
+      },
+        {
+        "site_url": "https://www.skyscanner.net/news/deals/cyber-monday-deals",
+        "scrape_filters": [
+           {
                 "parent_node": {
                   "tag_name": "section",
                   "prop": "class",
-                  "search_key": "ems-sdk-product-tile__details"
+                  "search_key": "BpkPanel_bpk-panel__1ms-z"
                 },
                 "prop_list": [
                   {
                     "text_type": "description",
                     "tag_name": "span",
                     "prop": "class",
-                    "search_key":  "body-2 truncate-text-2 psw-p-t-2xs"
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--xl__2xBzx DealCard_DealCard__placeName__1CMcr"
                   },
                   {
                     "text_type": "code",
-                    "tag_name": "div",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key":  "discount-badge__container psw-l-anchor"
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
                   },
                   {
                     "text_type": "terms",
-                    "tag_name": "div",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key":  "discount-badge__container psw-l-anchor"
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
                   },
                   {
                     "text_type": "expiry",
-                    "tag_name": "div",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key":  "discount-badge__container psw-l-anchor"
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
                   }
                 ]
               }
-            ]
-          }
+        ]
+      },
+      {
+        "site_url": "https://www.skyscanner.net/news/deals/black-friday-and-cyber-monday-holiday-deals-2",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "section",
+                  "prop": "class",
+                  "search_key": "BpkPanel_bpk-panel__1ms-z"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--xl__2xBzx DealCard_DealCard__placeName__1CMcr"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
+                  }
+                ]
+              }
         ]
       }
     ]

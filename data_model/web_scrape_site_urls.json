@@ -7,10 +7,7 @@
       {
         "site_url": "https://www.adidas.com/us/promotions",
         "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+           {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
@@ -43,7 +40,7 @@
                   }
                 ]
               },
-               {
+          {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
@@ -76,9 +73,6 @@
                   }
                 ]
               }
-
-            ]
-          }
         ]
       }
     ]
@@ -92,9 +86,6 @@
         "site_url": "https://www.asos.com",
         "scrape_filters": [
           {
-
-            "property_filter": [
-              {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
@@ -127,8 +118,6 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       }
     ]
@@ -141,10 +130,7 @@
       {
         "site_url": "https://www.booking.com/dealspage.en-us.html?slc=d1;aid=378266;label=sl-en-us-deal-gJ5VcBtZmwJpmGZaurzm0AS267778093627:pl:ta:p1:p22,563,000:ac:ap:neg:fi54112905013:tikwd-488842039672:lp1009919:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YYriJK-Ikd_dLBPOo0BdMww;ws=&gclid=CjwKCAiA2O39BRBjEiwApB2IkiB9gpYm6JgsyJU3tmdOxjLkXo1qi75blwiL5nZUD7WIrdw9CVujrRoC9eYQAvD_BwE",
         "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+           {
                 "parent_node": {
                   "tag_name": "p",
                   "prop": "class",
@@ -177,8 +163,6 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       }
     ]
@@ -191,10 +175,7 @@
       {
         "site_url":"https://www.decathlon.my/page/promotions.html",
         "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+           {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
@@ -227,8 +208,6 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       }
     ]
@@ -241,10 +220,7 @@
       {
         "site_url":"https://www.elcorteingles.com/en/prices-worth-celebrating/",
          "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+            {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
@@ -277,8 +253,6 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       }
     ]
@@ -291,10 +265,7 @@
       {
         "site_url": "https://www.fnac.com/destockage/",
          "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+           {
                 "parent_node": {
                   "tag_name": "li",
                   "prop": "class",
@@ -327,17 +298,12 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       },
       {
         "site_url": "https://www.fnac.com/choisir-carte#bl=marktlink5",
          "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+            {
                 "parent_node": {
                   "tag_name": "li",
                   "prop": "class",
@@ -370,8 +336,6 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       }
     ]
@@ -384,10 +348,7 @@
       {
         "site_url": "https://www.gearbest.com/coupon.html",
         "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+            {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
@@ -420,8 +381,6 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       }
     ]
@@ -434,10 +393,7 @@
       {
         "site_url":"https://www.ikea.com/my/en/campaigns/",
         "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+            {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
@@ -470,8 +426,6 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       }
     ]
@@ -484,10 +438,7 @@
       {
         "site_url": "https://www.joom.com/en/promotions/5b4f355c1436d41e50f40c23",
        "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+            {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
@@ -519,19 +470,8 @@
                     "search_key":  "title___2-V6Q"
                   }
                 ]
-              }
-            ]
-          }
-        ]
-      },
-
-      {
-        "site_url": "https://www.joom.com/en/promotions/5b4f355c1436d41e50f40c23",
-       "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+              },
+            {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
@@ -564,8 +504,6 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       }
     ]
@@ -578,10 +516,7 @@
       {
         "site_url": "https://codepromo.lexpress.fr/code-promo-leroy-merlin",
        "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+            {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
@@ -614,8 +549,6 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       }
     ]
@@ -628,10 +561,7 @@
       {
         "site_url": "https://www.mediamarkt.be/fr/shop/flyer.html",
         "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+           {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
@@ -664,8 +594,6 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       }
     ]
@@ -678,10 +606,7 @@
       {
         "site_url": "https://www.nike.com/promo-code",
         "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+           {
                 "parent_node": {
                   "tag_name": "figure",
                   "prop": "class",
@@ -714,17 +639,12 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       },
        {
         "site_url": "https://www.nike.com/w/cyber-monday-95xas",
         "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+           {
                 "parent_node": {
                   "tag_name": "header",
                   "prop": "class",
@@ -757,16 +677,12 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       },
       {
         "site_url": "https://www.nike.com/",
         "scrape_filters": [
-          {
-            "property_filter": [
-              {
+           {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
@@ -799,8 +715,6 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       }
     ]
@@ -813,10 +727,7 @@
       {
         "site_url": "https://store.playstation.com/en-us/deals",
        "scrape_filters": [
-          {
-
-            "property_filter": [
-              {
+            {
                 "parent_node": {
                   "tag_name": "section",
                   "prop": "class",
@@ -849,8 +760,6 @@
                   }
                 ]
               }
-            ]
-          }
         ]
       }
     ]
@@ -859,266 +768,159 @@
     "site_no": "14",
     "site_name": "ryanair",
     "site_host": "ryanair",
-    "web_scrape_key_elements":[
-      {
-        "site_url": "https://www.ryanair.com/gb/en/plan-trip/explore/promotions",
-        "scrape_filters": [
+    "scrape_filters": [
           {
-            "text_type": "description",
+
             "property_filter": [
               {
-                "tag_name": "h2",
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "textandtitle_container"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "textandtitle_textcontent"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "textandtitle_textcontent"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "textandtitle_textcontent"
                   },
                   {
+                    "text_type": "expiry",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  "textandtitle_textcontent"
                   }
                 ]
               }
             ]
           }
         ]
-      }
-    ]
   },
   {
     "site_no": "15",
     "site_name": "samsung",
     "site_host": "samsung",
-    "web_scrape_key_elements":[
+    "web_scrape_key_elements": [
       {
         "site_url": "https://www.samsung.com/us/promotions/",
         "scrape_filters": [
-          {
-            "text_type": "description",
-            "property_filter": [
-              {
-                "tag_name": "h2",
+           {
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "sg-g-promotions-promo-cards__card-info"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "h1",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key": "sg-g-promotions-promo-cards__card-title"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": "sg-g-promotions-promo-cards__card-text"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "sg-g-promotions-promo-cards__card-text"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "sg-g-promotions-promo-cards__card-date"
                   }
                 ]
               }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
+        ]
+      },
+      {
+        "site_url": "https://www.samsung.com/us/shop/all-deals/",
+        "scrape_filters": [
+           {
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "textBlock-wrapper"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "h3",
                     "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key": "textBlock-wrapper__desc"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "h3",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key": "textBlock-wrapper__desc"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "h3",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": "textBlock-wrapper__desc"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "h3",
+                    "prop": "class",
+                    "search_key": "textBlock-wrapper__desc"
                   }
                 ]
               },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
+             {
+                    "parent_node": {
+                      "tag_name": "div",
+                      "prop": "class",
+                      "search_key": "sg-g-promo-cards-container-card__text-block"
+                    },
+                    "prop_list": [
+                      {
+                        "text_type": "description",
+                        "tag_name": "div",
+                        "prop": "class",
+                        "search_key": "sg-g-promo-cards-container-card__text-block__desc"
+                      },
+                      {
+                        "text_type": "code",
+                        "tag_name": "div",
+                        "prop": "class",
+                        "search_key": "sg-g-promo-cards-container-card__text-block__title"
+                      },
+                      {
+                        "text_type": "terms",
+                        "tag_name": "div",
+                        "prop": "class",
+                        "search_key": "sg-g-promo-cards-container-card__text-block__desc"
+                      },
+                      {
+                        "text_type": "expiry",
+                        "tag_name": "div",
+                        "prop": "class",
+                        "search_key": "sg-g-promo-cards-container-card__text-block__desc"
+                      }
+                    ]
                   }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          }
         ]
       }
     ]
@@ -1127,132 +929,119 @@
     "site_no": "16",
     "site_name": "skyscanner",
     "site_host": "skyscanner",
-    "web_scrape_key_elements":[
+    "web_scrape_key_elements": [
       {
-        "site_url":"https://www.skyscanner.com/tips-and-inspiration/deals/daily-flights-deals",
+        "site_url": "https://www.skyscanner.com/tips-and-inspiration/deals/daily-flights-deals",
         "scrape_filters": [
-          {
-            "text_type": "description",
-            "property_filter": [
-              {
-                "tag_name": "h2",
+           {
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "single-post__main_content"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key": "single-post__summary entry-summary"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": "single-post__summary entry-summary"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "single-post__summary entry-summary"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "single-post__summary entry-summary"
                   }
                 ]
               }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
+        ]
+      },
+        {
+        "site_url": "https://www.skyscanner.net/news/deals/cyber-monday-deals",
+        "scrape_filters": [
+           {
                 "parent_node": {
+                  "tag_name": "section",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "BpkPanel_bpk-panel__1ms-z"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--xl__2xBzx DealCard_DealCard__placeName__1CMcr"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
                   }
                 ]
               }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
+        ]
+      },
+      {
+        "site_url": "https://www.skyscanner.net/news/deals/black-friday-and-cyber-monday-holiday-deals-2",
+        "scrape_filters": [
+           {
                 "parent_node": {
+                  "tag_name": "section",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "BpkPanel_bpk-panel__1ms-z"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--xl__2xBzx DealCard_DealCard__placeName__1CMcr"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
                   },
                   {
+                    "text_type": "expiry",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
                   }
                 ]
               }
-            ]
-          }
         ]
       }
     ]

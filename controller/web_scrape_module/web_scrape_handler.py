@@ -5,6 +5,7 @@ import json
 import logging
 
 from bs4 import BeautifulSoup
+from fastapi import HTTPException
 from requests import Response
 from app_configurations.app_settings import AppSetting
 from selenium import webdriver
@@ -73,71 +74,67 @@ class WebScrapeHandler:
                         soup = await self.get_html_content(site_url)
 
                         for sf in range(len(scrape_filters)):
-                            prop_filter_list = scrape_filters[sf].get('property_filter')
 
-                            for j in range(len(prop_filter_list)):
-                                try:
-                                    loop_ref = f"company_counter:{c},main_loop_counter:{i},sub_loop_counter:{j}"
-                                    print(loop_ref)
-                                    prop_obj = prop_filter_list[j]
-                                    parent_node = prop_obj.get('parent_node')
-                                    parent_tag = parent_node.get('tag_name')
-                                    parent_attr = {parent_node.get('prop'): parent_node.get('search_key')}
-                                    prop_attr_sub_list = []
-                                    prop_attr_sub_list = prop_obj.get('prop_list')
+                            try:
+                                loop_ref = f"company_counter:{c},main_loop_counter:{i},sf_loop_counter:{sf}"
+                                print(loop_ref)
+                                sf_obj = scrape_filters[sf]
+                                parent_node = sf_obj.get('parent_node')
+                                parent_tag = parent_node.get('tag_name')
+                                parent_attr = {parent_node.get('prop'): parent_node.get('search_key')}
+                                prop_attr_sub_list = []
+                                prop_attr_sub_list = sf_obj.get('prop_list')
 
-                                    print(f"prop_obj:{prop_obj}")
+                                # get all elements from parent node
+                                ele_list = soup.find_all(parent_tag, attrs=parent_attr)
+                                print(f"parent_tag(new):{parent_tag},ele_list:{ele_list}")
 
-                                    # get all elements from parent node
-                                    ele_list = soup.find_all(parent_tag, attrs=parent_attr)
-                                    print(f"parent_tag(new):{parent_tag},ele_list:{ele_list}")
+                                # get actual descendant elements
+                                elem_by_field = self.get_elems_by_field(prop_attr_sub_list)
+                                descr_node = elem_by_field["description"]
+                                coupon_code_node = elem_by_field["coupon_code"]
+                                terms_node = elem_by_field["terms"]
+                                expiry_node = elem_by_field["expiry"]
 
-                                    # get actual descendant elements
-                                    elem_by_field = self.get_elems_by_field(prop_attr_sub_list)
-                                    descr_node = elem_by_field["description"]
-                                    coupon_code_node = elem_by_field["coupon_code"]
-                                    terms_node = elem_by_field["terms"]
-                                    expiry_node = elem_by_field["expiry"]
+                                descr_attr = descr_node.get("attr")
+                                descr_tag_name = descr_node.get("tag_name")
+                                coupon_code_attr = coupon_code_node.get("attr")
+                                coupon_code_tag_name = coupon_code_node.get("tag_name")
+                                terms_attr = terms_node.get("attr")
+                                terms_tag_name = terms_node.get("tag_name")
+                                exp_attr = expiry_node.get("attr")
+                                exp_tag_name = expiry_node.get("tag_name")
 
-                                    descr_attr = descr_node.get("attr")
-                                    descr_tag_name = descr_node.get("tag_name")
-                                    coupon_code_attr = coupon_code_node.get("attr")
-                                    coupon_code_tag_name = coupon_code_node.get("tag_name")
-                                    terms_attr = terms_node.get("attr")
-                                    terms_tag_name = terms_node.get("tag_name")
-                                    exp_attr = expiry_node.get("attr")
-                                    exp_tag_name = expiry_node.get("tag_name")
+                                if ele_list is not None:
+                                    for el in range(len(ele_list)):
+                                        el_obj = ele_list[el]
+                                        description = el_obj.find(descr_tag_name, descr_attr)
+                                        coupon_code = el_obj.find(coupon_code_tag_name, coupon_code_attr)
+                                        terms = el_obj.find(terms_tag_name, terms_attr)
+                                        expiry = el_obj.find(exp_tag_name, exp_attr)
 
-                                    if ele_list is not None:
-                                        for el in range(len(ele_list)):
-                                            el_obj = ele_list[el]
-                                            description = el_obj.find(descr_tag_name, descr_attr)
-                                            coupon_code = el_obj.find(coupon_code_tag_name, coupon_code_attr)
-                                            terms = el_obj.find(terms_tag_name, terms_attr)
-                                            expiry = el_obj.find(exp_tag_name, exp_attr)
+                                        if site_url == 'https://www.gearbest.com/coupon.html':
+                                            print(f"ayyo=>description:{description},coupon_code:{coupon_code}")
 
-                                            if site_url == 'https://www.gearbest.com/coupon.html':
-                                                print(f"ayyo=>description:{description},coupon_code:{coupon_code}")
+                                        descr_text = self.get_description(
+                                            description.text) if description is not None else ""
+                                        cc_text = self.get_coupon_code(
+                                            coupon_code.text) if coupon_code is not None else ""
+                                        terms_text = self.get_terms(terms.text) if terms is not None else ""
+                                        exp_text = self.get_expiry_date(
+                                            expiry.text) if expiry is not None else "2020-12-31T00:00:00Z"
 
-                                            descr_text = self.get_description(
-                                                description.text) if description is not None else ""
-                                            cc_text = self.get_coupon_code(
-                                                coupon_code.text) if coupon_code is not None else ""
-                                            terms_text = self.get_terms(terms.text) if terms is not None else ""
-                                            exp_text = self.get_expiry_date(
-                                                expiry.text) if expiry is not None else "2020-12-31T00:00:00Z"
+                                        if site_url == 'https://www.gearbest.com/coupon.html':
+                                            print(f"ayyo=>descr_text:{descr_text},cc_text:{cc_text}")
 
-                                            if site_url == 'https://www.gearbest.com/coupon.html':
-                                                print(f"ayyo=>descr_text:{descr_text},cc_text:{cc_text}")
-
-                                            if len(cc_text) > 0 or len(descr_text) > 0:
-                                                site_coupon_list.append(
-                                                    {"description": descr_text, "code": cc_text, "terms": terms_text,
-                                                     "expiry": exp_text})
-                                except Exception:
-                                    msg = f'WebScrapeHandler=>fetch_site_data()=>prop_loop=>{loop_ref}:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-                                    print(msg)
-                                    logger.error(msg)
+                                        if len(cc_text) > 0 or len(descr_text) > 0:
+                                            site_coupon_list.append(
+                                                {"description": descr_text, "code": cc_text, "terms": terms_text,
+                                                 "expiry": exp_text})
+                            except Exception:
+                                msg = f'WebScrapeHandler=>fetch_site_data()=>company_loop=>{loop_ref}:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
+                                print(msg)
+                                logger.error(msg)
                         main_list.append(
                             {"host": site_host, "url": site_url, "name": site_name, "coupons": site_coupon_list})
                 except Exception:
@@ -232,7 +229,7 @@ class WebScrapeHandler:
             if coupon_code_text is not None:
                 data_keys = promo_keyword_json["coupon_code"].get('keyword_list')
                 invalid_data_keys = promo_keyword_json["coupon_code"].get('keyword_list')
-                #result = coupon_code_text if self.is_keyword_found(data_keys, coupon_code_text.lower()) else ""
+                # result = coupon_code_text if self.is_keyword_found(data_keys, coupon_code_text.lower()) else ""
                 result = "" if self.is_keyword_found(invalid_data_keys, coupon_code_text.lower()) else coupon_code_text
             return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
@@ -277,22 +274,27 @@ class WebScrapeHandler:
                 msg = f"Successfully received access_token={access_token}"
                 print(msg)
                 logger.info(msg)
-
                 if self.post_web_scrape_data(auth_token=access_token, web_scrape_data=res):
                     # Successfully posted the web scrape data
-                    success_msg = "Message:Publicó con éxito los datos del raspado de la web"
+                    success_msg = "Publicó con éxito los datos del raspado de la web"
                     logger.error(f"{msg},{success_msg}")
-                    return Response({f"{success_msg}"}, status=200)
+                    return {"Message": msg}
                 else:
                     # An Error occurred while posting the web scrape data
                     msg = "Se produjo un error al publicar los datos del web scrape"
                     print(msg)
                     logger.error(msg)
-                    return Response({f"Message:{msg}"}, status=400)
+                    raise HTTPException(status_code=400, detail=msg)
+            else:
+                msg = "Ficha de acceso inválida"
+                print(msg)
+                raise HTTPException(status_code=400, detail=msg)
+            return response
         except Exception:
             msg = f'WebScrapeHandler=>send_promotion_data()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
             print(msg)
             logger.error(msg)
+            raise HTTPException(status_code=400, detail=msg)
 
     def get_access_token(self):
         try:
