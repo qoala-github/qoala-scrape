@@ -1,118 +1,75 @@
 [
   {
-    "site_no": "14",
-    "site_name": "skyscanner",
-    "site_host": "skyscanner",
+    "site_no": "18",
+    "site_name": "tradeinn",
+    "site_host": "tradeinn",
     "web_scrape_key_elements": [
-      {
-        "site_url": "https://www.skyscanner.com/tips-and-inspiration/deals/daily-flights-deals",
+     {
+        "site_url": "https://www.adidas.com/us/promotions",
         "scrape_filters": [
            {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
-                  "search_key": "single-post__main_content"
+                  "search_key": "poster_content___39q_N"
                 },
                 "prop_list": [
                   {
                     "text_type": "description",
-                    "tag_name": "div",
+                    "tag_name": "h2",
                     "prop": "class",
-                    "search_key": "single-post__summary entry-summary"
+                    "search_key":  "title___1vL99"
                   },
                   {
                     "text_type": "code",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": "single-post__summary entry-summary"
+                    "search_key": "summary___37JYH"
                   },
                   {
                     "text_type": "terms",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": "single-post__summary entry-summary"
+                    "search_key": "summary___37JYH"
                   },
                   {
                     "text_type": "expiry",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": "single-post__summary entry-summary"
+                    "search_key":  "summary___37JYH"
                   }
                 ]
-              }
-        ]
-      },
-        {
-        "site_url": "https://www.skyscanner.net/news/deals/cyber-monday-deals",
-        "scrape_filters": [
-           {
+              },
+          {
                 "parent_node": {
-                  "tag_name": "section",
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "BpkPanel_bpk-panel__1ms-z"
+                  "search_key": "gl-product-card"
                 },
                 "prop_list": [
                   {
                     "text_type": "description",
-                    "tag_name": "span",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--xl__2xBzx DealCard_DealCard__placeName__1CMcr"
+                    "search_key":  "gl-badge"
                   },
                   {
                     "text_type": "code",
-                    "tag_name": "span",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
+                    "search_key": "gl-badge"
                   },
                   {
                     "text_type": "terms",
-                    "tag_name": "span",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
+                    "search_key": "gl-badge"
                   },
                   {
                     "text_type": "expiry",
-                    "tag_name": "span",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
-                  }
-                ]
-              }
-        ]
-      },
-      {
-        "site_url": "https://www.skyscanner.net/news/deals/black-friday-and-cyber-monday-holiday-deals-2",
-        "scrape_filters": [
-           {
-                "parent_node": {
-                  "tag_name": "section",
-                  "prop": "class",
-                  "search_key": "BpkPanel_bpk-panel__1ms-z"
-                },
-                "prop_list": [
-                  {
-                    "text_type": "description",
-                    "tag_name": "span",
-                    "prop": "class",
-                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--xl__2xBzx DealCard_DealCard__placeName__1CMcr"
-                  },
-                  {
-                    "text_type": "code",
-                    "tag_name": "span",
-                    "prop": "class",
-                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
-                  },
-                  {
-                    "text_type": "terms",
-                    "tag_name": "span",
-                    "prop": "class",
-                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
-                  },
-                  {
-                    "text_type": "expiry",
-                    "tag_name": "span",
-                    "prop": "class",
-                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
+                    "search_key": "gl-badge"
                   }
                 ]
               }

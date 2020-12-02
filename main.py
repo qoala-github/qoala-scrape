@@ -151,24 +151,10 @@ def get_hashed_password(password):
 @app.post("/web_scrape/send")
 async def fetch_and_send_web_scrape_data():
     try:
-        """
-        user_agent = app_settings.WEB_SCRAPE_USER_AGENT
-        headers = {"user-agent": user_agent}
-        site_url = 'https://www.adidas.com/us/promotions'
-        req = requests.get(site_url, headers=headers)
-        soup = BeautifulSoup(req.text, "html.parser")
-        ele_list = soup.find_all('h2', attrs={'class': 'title___1vL99 withhtml___3nraa gl-heading--l'})
-        list_obj = [{"tag-data": str(e.text)} for e in ele_list]
-        print(f"list_obj:{list_obj}")
-        json_res = json.dumps(list_obj)
-        print(type(list_obj))
-        """
         web_scrape_handler = WebScrapeHandler()
         result = await web_scrape_handler.send_promotion_data()
         print(f"result:{result}")
-        # pre_res = json.loads(result)
-        # pos_res = json.dumps(pre_res)
-        # print(type(pos_res))
+        logger.info(f"Success:{result}")
         return result
     except Exception:
         msg = f'WebScrapeHandler=>send_promotion_data()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'

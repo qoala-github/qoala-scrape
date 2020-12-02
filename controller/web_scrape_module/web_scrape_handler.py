@@ -81,7 +81,7 @@ class WebScrapeHandler:
                                 sf_obj = scrape_filters[sf]
                                 parent_node = sf_obj.get('parent_node')
                                 parent_tag = parent_node.get('tag_name')
-                                parent_attr = {parent_node.get('prop'): parent_node.get('search_key')}
+                                parent_attr = {parent_node.get('prop'): parent_node.get('search_key').replace("Â", "")}
                                 prop_attr_sub_list = []
                                 prop_attr_sub_list = sf_obj.get('prop_list')
 
@@ -113,19 +113,18 @@ class WebScrapeHandler:
                                         terms = el_obj.find(terms_tag_name, terms_attr)
                                         expiry = el_obj.find(exp_tag_name, exp_attr)
 
-                                        if site_url == 'https://www.gearbest.com/coupon.html':
-                                            print(f"ayyo=>description:{description},coupon_code:{coupon_code}")
+                                        # Note : Sometimes the coipon code is available as an input value
+                                        coupon_code_txt = coupon_code.text if coupon_code is not None else ""
+                                        coupon_code_txt = coupon_code.get('value') if coupon_code is not None and len(
+                                            coupon_code_txt.strip()) == 0 else coupon_code_txt
 
                                         descr_text = self.get_description(
                                             description.text) if description is not None else ""
                                         cc_text = self.get_coupon_code(
-                                            coupon_code.text) if coupon_code is not None else ""
+                                            coupon_code_txt) if coupon_code is not None else ""
                                         terms_text = self.get_terms(terms.text) if terms is not None else ""
                                         exp_text = self.get_expiry_date(
                                             expiry.text) if expiry is not None else "2020-12-31T00:00:00Z"
-
-                                        if site_url == 'https://www.gearbest.com/coupon.html':
-                                            print(f"ayyo=>descr_text:{descr_text},cc_text:{cc_text}")
 
                                         if len(cc_text) > 0 or len(descr_text) > 0:
                                             site_coupon_list.append(
@@ -167,22 +166,22 @@ class WebScrapeHandler:
         try:
             # for description
             descr_obj = [d for d in prop_attr_sub_list if d.get('text_type') == 'description']
-            descr_attr = {descr_obj[0].get('prop'): descr_obj[0].get('search_key')}
+            descr_attr = {descr_obj[0].get('prop'): descr_obj[0].get('search_key').replace("Â", "")}
             descr_tag_name = descr_obj[0].get('tag_name')
 
             # for coupon code
             coupon_code_obj = [d for d in prop_attr_sub_list if d.get('text_type') == 'code']
-            coupon_code_attr = {coupon_code_obj[0].get('prop'): coupon_code_obj[0].get('search_key')}
+            coupon_code_attr = {coupon_code_obj[0].get('prop'): coupon_code_obj[0].get('search_key').replace("Â", "")}
             coupon_code_tag_name = coupon_code_obj[0].get('tag_name')
 
             # for terms details
             terms_obj = [d for d in prop_attr_sub_list if d.get('text_type') == 'terms']
-            terms_attr = {terms_obj[0].get('prop'): terms_obj[0].get('search_key')}
+            terms_attr = {terms_obj[0].get('prop'): terms_obj[0].get('search_key').replace("Â", "")}
             terms_tag_name = terms_obj[0].get('tag_name')
 
             # for expiry details
             exp_obj = [d for d in prop_attr_sub_list if d.get('text_type') == 'expiry']
-            exp_attr = {exp_obj[0].get('prop'): exp_obj[0].get('search_key')}
+            exp_attr = {exp_obj[0].get('prop'): exp_obj[0].get('search_key').replace("Â", "")}
             exp_tag_name = exp_obj[0].get('tag_name')
 
             result_obj = {
@@ -225,12 +224,7 @@ class WebScrapeHandler:
 
     def get_coupon_code(self, coupon_code_text):
         try:
-            result = ""
-            if coupon_code_text is not None:
-                data_keys = promo_keyword_json["coupon_code"].get('keyword_list')
-                invalid_data_keys = promo_keyword_json["coupon_code"].get('keyword_list')
-                # result = coupon_code_text if self.is_keyword_found(data_keys, coupon_code_text.lower()) else ""
-                result = "" if self.is_keyword_found(invalid_data_keys, coupon_code_text.lower()) else coupon_code_text
+            result = coupon_code_text
             return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
             msg = f'WebScrapeHandler=>get_coupon_code()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
@@ -268,7 +262,8 @@ class WebScrapeHandler:
             res = json.dumps(result)
 
             # login to client API and get token
-            access_token = self.get_access_token()
+            # NOTE : Currently, no access token is required
+            access_token = "not_required"  # self.get_access_token()
 
             if (access_token is not None and access_token != "error"):
                 msg = f"Successfully received access_token={access_token}"
@@ -277,8 +272,8 @@ class WebScrapeHandler:
                 if self.post_web_scrape_data(auth_token=access_token, web_scrape_data=res):
                     # Successfully posted the web scrape data
                     success_msg = "Publicó con éxito los datos del raspado de la web"
-                    logger.error(f"{msg},{success_msg}")
-                    return {"Message": msg}
+                    logger.info(f"{msg},{success_msg}")
+                    return {"Message": success_msg}
                 else:
                     # An Error occurred while posting the web scrape data
                     msg = "Se produjo un error al publicar los datos del web scrape"
@@ -326,10 +321,10 @@ class WebScrapeHandler:
 
     def post_web_scrape_data(self, auth_token, web_scrape_data):
         try:
-            msg = f"Inside publish_script_tag()=>auth_token={auth_token}"
+            msg = f"Inside post_web_scrape_data()=>auth_token={auth_token}"
             print(msg)
             logger.info(msg)
-            req_url = f"{app_settings}brands"
+            req_url = f"{app_settings.CLIENT_API_URL_PREFIX}brands"
             msg = f"req_url:{req_url}"
             print(msg)
             logger.info(msg)
@@ -337,8 +332,14 @@ class WebScrapeHandler:
             msg = {"req_url": req_url, "auth_token": auth_token, "data": body_data}
             print(msg)
             logger.info(msg)
+            res = None
+            headers_param = {"Content-type": "application/json"} if auth_token == "not_required" else {
+                "Authorization": "Bearer %s" % auth_token, "Content-type": "application/json"}
+            msg = f"headers_param:{headers_param}"
+            print(msg)
+            logger.info(msg)
             res = requests.post(req_url, data=body_data,
-                                headers={"Authorization": "Bearer %s" % auth_token, "Content-type": "application/json"})
+                                headers=headers_param)
             msg = f"res_status={res.status_code}, res-reason={res.reason}, res_text={res.text}"
             print(msg)
             logger.info(msg)

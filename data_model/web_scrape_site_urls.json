@@ -3,8 +3,8 @@
     "site_no": "1",
     "site_name": "adidas",
     "site_host": "adidas",
-    "web_scrape_key_elements":[
-      {
+   "web_scrape_key_elements": [
+     {
         "site_url": "https://www.adidas.com/us/promotions",
         "scrape_filters": [
            {
@@ -18,25 +18,25 @@
                     "text_type": "description",
                     "tag_name": "h2",
                     "prop": "class",
-                    "search_key":  ["title___1vL99", "withhtml___3nraa" ,"gl-heading--l"]
+                    "search_key":  "title___1vL99"
                   },
                   {
                     "text_type": "code",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": ["summary___37JYH","gl-body--l", "withhtml___3nraa"]
+                    "search_key": "summary___37JYH"
                   },
                   {
                     "text_type": "terms",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": ["summary___37JYH","gl-body--l", "withhtml___3nraa"]
+                    "search_key": "summary___37JYH"
                   },
                   {
                     "text_type": "expiry",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key":  ["summary___37JYH","gl-body--l", "withhtml___3nraa"]
+                    "search_key":  "summary___37JYH"
                   }
                 ]
               },
@@ -1050,132 +1050,81 @@
     "site_no": "17",
     "site_name": "supermercadosdia",
     "site_host": "supermercadosdia",
-    "web_scrape_key_elements":[
+     "web_scrape_key_elements": [
       {
         "site_url": "https://www.supermercadosdia.com.ar/",
         "scrape_filters": [
-          {
-            "text_type": "description",
-            "property_filter": [
-              {
-                "tag_name": "h2",
+           {
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "card-body"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "h6",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key": "card-title"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": "badge"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "badge"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "badge"
                   }
                 ]
               }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
+        ]
+      },
+      {
+        "site_url": "https://www.tiendeo.com.ar/ofertas-catalogos/supermercados-dia",
+        "scrape_filters": [
+           {
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "c·catalog__details"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "h3",
                     "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key": "c·catalog__title"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "p",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "p",
+                    "prop": "class",
+                    "search_key": "o·daysleft"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "p",
+                    "prop": "class",
+                    "search_key": "o·daysleft"
                   }
                 ]
               }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          }
         ]
       }
     ]
@@ -1184,132 +1133,76 @@
     "site_no": "18",
     "site_name": "tradeinn",
     "site_host": "knoji",
-    "web_scrape_key_elements":[
+    "web_scrape_key_elements": [
       {
         "site_url": "https://tradeinn.knoji.com/promo-codes/",
         "scrape_filters": [
-          {
-            "text_type": "description",
-            "property_filter": [
-              {
-                "tag_name": "h2",
+           {
                 "parent_node": {
+                  "tag_name": "span",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "prel"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key": "codepill"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key": "codepill"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key": "codepill"
                   },
                   {
+                    "text_type": "expiry",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": "codepill"
                   }
                 ]
               },
-              {
-                "tag_name": "div",
+            {
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "promo3__middle"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key": "promo3__middle--left"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "input",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": "promo--codebox--small"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "promo3__middle--left"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "promo3__middle--left"
                   }
                 ]
               }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          }
         ]
       }
     ]
@@ -1318,132 +1211,421 @@
     "site_no": "19",
     "site_name": "zalando",
     "site_host": "zalando",
-    "web_scrape_key_elements":[
+   "web_scrape_key_elements": [
       {
         "site_url": "https://www.zalando.fr/promo-femme/",
         "scrape_filters": [
-          {
-            "text_type": "description",
-            "property_filter": [
-              {
-                "tag_name": "h2",
+           {
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "z-banner_text"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                     "tag_name": "span",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key": ""
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key": ""
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key": ""
                   },
                   {
+                    "text_type": "expiry",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": ""
                   }
                 ]
               },
-              {
-                "tag_name": "div",
+           {
                 "parent_node": {
+                  "tag_name": "article",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "_0mW-4D _0xLoFW JT3_zV mo6ZnF jtKZOh _78xIQ-"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "h3",
                     "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key": "u-6V88 ka2E9k uMhVZi FxZV-M z-oVg8 pVrzNP ZkIJC- r9BRio qXofat EKabf7"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
                   },
                   {
+                    "text_type": "terms",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
                   }
                 ]
               },
-              {
-                "tag_name": "div",
+           {
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "JT3_zV"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key": "DvypSJ"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
                   }
                 ]
               }
-            ]
-          }
+        ]
+      },
+      {
+        "site_url": "https://www.zalando.fr/promo-enfant/",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "z-banner_text"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                     "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  }
+                ]
+              },
+           {
+                "parent_node": {
+                  "tag_name": "article",
+                  "prop": "class",
+                  "search_key": "_0mW-4D _0xLoFW JT3_zV mo6ZnF jtKZOh _78xIQ-"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h3",
+                    "prop": "class",
+                    "search_key": "u-6V88 ka2E9k uMhVZi FxZV-M z-oVg8 pVrzNP ZkIJC- r9BRio qXofat EKabf7"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  }
+                ]
+              },
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "JT3_zV"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  }
+                ]
+              }
+        ]
+      },
+       {
+        "site_url": "https://www.zalando.fr/promo-homme/",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "z-banner_text"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                     "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  }
+                ]
+              },
+           {
+                "parent_node": {
+                  "tag_name": "article",
+                  "prop": "class",
+                  "search_key": "_0mW-4D _0xLoFW JT3_zV mo6ZnF jtKZOh _78xIQ-"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h3",
+                    "prop": "class",
+                    "search_key": "u-6V88 ka2E9k uMhVZi FxZV-M z-oVg8 pVrzNP ZkIJC- r9BRio qXofat EKabf7"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  }
+                ]
+              },
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "JT3_zV"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  }
+                ]
+              }
+        ]
+      },
+      {
+        "site_url": "https://www.zalando.fr/black-friday/",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "z-banner_text"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                     "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  }
+                ]
+              },
+           {
+                "parent_node": {
+                  "tag_name": "article",
+                  "prop": "class",
+                  "search_key": "_0mW-4D _0xLoFW JT3_zV mo6ZnF jtKZOh _78xIQ-"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h3",
+                    "prop": "class",
+                    "search_key": "u-6V88 ka2E9k uMhVZi FxZV-M z-oVg8 pVrzNP ZkIJC- r9BRio qXofat EKabf7"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  }
+                ]
+              },
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "JT3_zV"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  }
+                ]
+              }
         ]
       }
     ]
