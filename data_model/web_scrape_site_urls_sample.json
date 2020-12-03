@@ -1,75 +1,80 @@
 [
   {
-    "site_no": "18",
-    "site_name": "tradeinn",
-    "site_host": "tradeinn",
+    "site_no": "20",
+    "site_name": "zara",
+    "site_host": "zara",
     "web_scrape_key_elements": [
      {
-        "site_url": "https://www.adidas.com/us/promotions",
+        "site_url": "https://www.zara.com/uk/en/woman-special-prices-l1314.html",
         "scrape_filters": [
            {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "product-info"
                 },
                 "prop_list": [
                   {
                     "text_type": "description",
-                    "tag_name": "h2",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key":  "title___1vL99"
+                    "search_key":  "product-name"
                   },
                   {
                     "text_type": "code",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": "summary___37JYH"
+                    "search_key": "product-info-item-label"
                   },
                   {
                     "text_type": "terms",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": "summary___37JYH"
+                    "search_key": "product-info-item-label"
                   },
                   {
                     "text_type": "expiry",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key":  "summary___37JYH"
+                    "search_key": "product-info-item-label"
                   }
                 ]
-              },
-          {
+              }
+        ]
+      },
+      {
+        "site_url": "https://www.forbes.com/coupons/zara.com/",
+        "scrape_filters": [
+           {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
-                  "search_key": "gl-product-card"
+                  "search_key": "promotion-discount-card__main"
                 },
                 "prop_list": [
                   {
                     "text_type": "description",
-                    "tag_name": "div",
+                    "tag_name": "h3",
                     "prop": "class",
-                    "search_key":  "gl-badge"
+                    "search_key":  "promotion-discount-card__info__title mb-3"
                   },
                   {
                     "text_type": "code",
-                    "tag_name": "div",
-                    "prop": "class",
-                    "search_key": "gl-badge"
+                    "tag_name": "",
+                    "prop": "",
+                    "search_key": ""
                   },
                   {
                     "text_type": "terms",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": "gl-badge"
+                    "search_key":  "promotion-discount-card__info__description"
                   },
                   {
                     "text_type": "expiry",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": "gl-badge"
+                    "search_key":  "promotion-discount-card__info__description"
                   }
                 ]
               }

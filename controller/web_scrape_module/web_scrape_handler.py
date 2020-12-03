@@ -3,10 +3,10 @@ import traceback
 import requests
 import json
 import logging
+import uuid
 
 from bs4 import BeautifulSoup
 from fastapi import HTTPException
-from requests import Response
 from app_configurations.app_settings import AppSetting
 from selenium import webdriver
 
@@ -33,15 +33,20 @@ class WebScrapeHandler:
 
     async def fetch_site_data(self):
         loop_ref = ""
+        error_list = []
+        error_guid = uuid.uuid1()
         try:
 
             user_agent = app_settings.WEB_SCRAPE_USER_AGENT
-            headers = {"user-agent": user_agent}
-            max_redirects = int(app_settings.SITE_URL_MAX_REDIRECTS)
+            # headers = {"user-agent": user_agent}
+            # max_redirects = int(app_settings.SITE_URL_MAX_REDIRECTS)
             main_list = []
             site_coupon_list = []
             company_list = []
-            data_count = 1  # len(company_json)
+            site_no = ""
+            site_name = ""
+
+            data_count = len(company_json)
             for csl in range(data_count):
                 company_list.append(company_json[csl])
 
@@ -49,103 +54,131 @@ class WebScrapeHandler:
                 try:
                     com_obj = company_list[c]
                     print(com_obj)
+                    company_no = com_obj.get('company_no')
                     site_name = com_obj.get('site_name')
                     site_host = com_obj.get('site_host')
                     target_elem = com_obj.get('web_scrape_key_elements')
                     df = None
 
                     for i in range(len(target_elem)):
-                        target_elem_obj = target_elem[i]
-                        site_url = target_elem_obj.get('site_url')
-                        site_coupon_list = []
-                        print(f"{c}:{site_url}")
-                        scrape_filters = target_elem_obj.get('scrape_filters')
+                        try:
+                            target_elem_obj = target_elem[i]
+                            site_url = target_elem_obj.get('site_url')
+                            site_coupon_list = []
+                            print(f"{c}:{site_url}")
+                            scrape_filters = target_elem_obj.get('scrape_filters')
 
-                        # extract the html content from URL
-                        """
-                        session_ini = requests.Session()
-                        session_ini.max_redirects = max_redirects
-                        session_ini.headers['User-Agent'] = user_agent
-                        req = session_ini.get(site_url)
-                        # req = requests.get(site_url, headers=headers)
-                        # print(f"{c}:{req.text}")
-                        soup = BeautifulSoup(req.content, "html5lib")
-                        """
-                        soup = await self.get_html_content(site_url)
+                            # extract the html content from URL
+                            """
+                            session_ini = requests.Session()
+                            session_ini.max_redirects = max_redirects
+                            session_ini.headers['User-Agent'] = user_agent
+                            req = session_ini.get(site_url)
+                            # req = requests.get(site_url, headers=headers)
+                            # print(f"{c}:{req.text}")
+                            soup = BeautifulSoup(req.content, "html5lib")
+                            """
+                            soup = await self.get_html_content(site_url)
 
-                        for sf in range(len(scrape_filters)):
+                            for sf in range(len(scrape_filters)):
 
-                            try:
-                                loop_ref = f"company_counter:{c},main_loop_counter:{i},sf_loop_counter:{sf}"
-                                print(loop_ref)
-                                sf_obj = scrape_filters[sf]
-                                parent_node = sf_obj.get('parent_node')
-                                parent_tag = parent_node.get('tag_name')
-                                parent_attr = {parent_node.get('prop'): parent_node.get('search_key').replace("Â", "")}
-                                prop_attr_sub_list = []
-                                prop_attr_sub_list = sf_obj.get('prop_list')
+                                try:
+                                    loop_ref = f"company_counter:{c},main_loop_counter:{i},sf_loop_counter:{sf}"
+                                    print(loop_ref)
+                                    sf_obj = scrape_filters[sf]
+                                    parent_node = sf_obj.get('parent_node')
+                                    parent_tag = parent_node.get('tag_name')
+                                    parent_attr = {
+                                        parent_node.get('prop'): parent_node.get('search_key').replace("Â", "")}
+                                    prop_attr_sub_list = []
+                                    prop_attr_sub_list = sf_obj.get('prop_list')
 
-                                # get all elements from parent node
-                                ele_list = soup.find_all(parent_tag, attrs=parent_attr)
-                                print(f"parent_tag(new):{parent_tag},ele_list:{ele_list}")
+                                    # get all elements from parent node
+                                    ele_list = soup.find_all(parent_tag, attrs=parent_attr)
+                                    print(f"parent_tag(new):{parent_tag},ele_list:{ele_list}")
 
-                                # get actual descendant elements
-                                elem_by_field = self.get_elems_by_field(prop_attr_sub_list)
-                                descr_node = elem_by_field["description"]
-                                coupon_code_node = elem_by_field["coupon_code"]
-                                terms_node = elem_by_field["terms"]
-                                expiry_node = elem_by_field["expiry"]
+                                    # get actual descendant elements
+                                    elem_by_field = self.get_elems_by_field(prop_attr_sub_list)
+                                    descr_node = elem_by_field["description"]
+                                    coupon_code_node = elem_by_field["coupon_code"]
+                                    terms_node = elem_by_field["terms"]
+                                    expiry_node = elem_by_field["expiry"]
 
-                                descr_attr = descr_node.get("attr")
-                                descr_tag_name = descr_node.get("tag_name")
-                                coupon_code_attr = coupon_code_node.get("attr")
-                                coupon_code_tag_name = coupon_code_node.get("tag_name")
-                                terms_attr = terms_node.get("attr")
-                                terms_tag_name = terms_node.get("tag_name")
-                                exp_attr = expiry_node.get("attr")
-                                exp_tag_name = expiry_node.get("tag_name")
+                                    descr_attr = descr_node.get("attr")
+                                    descr_tag_name = descr_node.get("tag_name")
+                                    coupon_code_attr = coupon_code_node.get("attr")
+                                    coupon_code_tag_name = coupon_code_node.get("tag_name")
+                                    terms_attr = terms_node.get("attr")
+                                    terms_tag_name = terms_node.get("tag_name")
+                                    exp_attr = expiry_node.get("attr")
+                                    exp_tag_name = expiry_node.get("tag_name")
 
-                                if ele_list is not None:
-                                    for el in range(len(ele_list)):
-                                        el_obj = ele_list[el]
-                                        description = el_obj.find(descr_tag_name, descr_attr)
-                                        coupon_code = el_obj.find(coupon_code_tag_name, coupon_code_attr)
-                                        terms = el_obj.find(terms_tag_name, terms_attr)
-                                        expiry = el_obj.find(exp_tag_name, exp_attr)
+                                    if ele_list is not None:
+                                        for el in range(len(ele_list)):
+                                            el_obj = ele_list[el]
+                                            description = el_obj.find(descr_tag_name, descr_attr)
+                                            coupon_code = el_obj.find(coupon_code_tag_name, coupon_code_attr)
+                                            terms = el_obj.find(terms_tag_name, terms_attr)
+                                            expiry = el_obj.find(exp_tag_name, exp_attr)
 
-                                        # Note : Sometimes the coipon code is available as an input value
-                                        coupon_code_txt = coupon_code.text if coupon_code is not None else ""
-                                        coupon_code_txt = coupon_code.get('value') if coupon_code is not None and len(
-                                            coupon_code_txt.strip()) == 0 else coupon_code_txt
+                                            # Note : Sometimes the coipon code is available as an input value
+                                            coupon_code_txt = coupon_code.text if coupon_code is not None else ""
+                                            coupon_code_txt = coupon_code.get(
+                                                'value') if coupon_code is not None and len(
+                                                coupon_code_txt.strip()) == 0 else coupon_code_txt
 
-                                        descr_text = self.get_description(
-                                            description.text) if description is not None else ""
-                                        cc_text = self.get_coupon_code(
-                                            coupon_code_txt) if coupon_code is not None else ""
-                                        terms_text = self.get_terms(terms.text) if terms is not None else ""
-                                        exp_text = self.get_expiry_date(
-                                            expiry.text) if expiry is not None else "2020-12-31T00:00:00Z"
+                                            descr_text = self.get_description(
+                                                description.text) if description is not None else ""
+                                            cc_text = self.get_coupon_code(
+                                                coupon_code_txt) if coupon_code is not None else ""
+                                            terms_text = self.get_terms(terms.text) if terms is not None else ""
+                                            exp_text = self.get_expiry_date(
+                                                expiry.text) if expiry is not None else "2020-12-31T00:00:00Z"
 
-                                        if len(cc_text) > 0 or len(descr_text) > 0:
-                                            site_coupon_list.append(
-                                                {"description": descr_text, "code": cc_text, "terms": terms_text,
-                                                 "expiry": exp_text})
-                            except Exception:
-                                msg = f'WebScrapeHandler=>fetch_site_data()=>company_loop=>{loop_ref}:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-                                print(msg)
-                                logger.error(msg)
+                                            if len(cc_text) > 0 or len(descr_text) > 0:
+                                                site_coupon_list.append(
+                                                    {"description": descr_text, "code": cc_text, "terms": terms_text,
+                                                     "expiry": exp_text})
+                                except Exception:
+                                    msg = f'WebScrapeHandler=>fetch_site_data()=>company_loop=>{loop_ref}:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
+                                    print(msg)
+                                    error_list.append(
+                                        {'error_loop_level': 'parent element', 'company_no': company_no,
+                                         'company_name': site_name, 'site_url': site_url,
+                                         'error_msg': msg})
+                                    logger.error(msg)
+                        except Exception:
+                            msg = f'WebScrapeHandler=>fetch_site_data()=>company_loop=>{loop_ref}:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
+                            print(msg)
+                            error_list.append(
+                                {'error_loop_level': 'web scrape key elements', 'company_no': company_no,
+                                 'company_name': site_name, 'site_url': site_url,
+                                 'error_msg': msg})
+                            logger.error(msg)
                         main_list.append(
                             {"host": site_host, "url": site_url, "name": site_name, "coupons": site_coupon_list})
-                except Exception:
+                except Exception:  # company loop exception
                     msg = f'WebScrapeHandler=>fetch_site_data()=>company_loop=>{loop_ref}:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
+                    error_list.append(
+                        {'error_loop_level': 'company', 'company_no': company_no, 'company_name': site_name,
+                         'error_msg': msg})
                     print(msg)
                     logger.error(msg)
+
+            if len(error_list) > 0:
+                error_list_obj = {'error_guid': error_guid, 'error_list': error_list}
+                json.dum
+                logger.error(error_list_obj)
+
             print(f"main_list:{main_list},no_of_items:{len(main_list)}")
             return main_list
         except Exception:
-            msg = f'WebScrapeHandler=>fetch_site_data()=>before_loop=>{loop_ref}:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
+            msg = f'WebScrapeHandler=>fetch_site_data()=>before_loop=>error_guid:{error_guid},loop_number:{loop_ref}:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
+            error_list.append(msg)
+            error_list_obj = {'error_guid': error_guid, 'error_list': error_list}
             print(msg)
             logger.error(msg)
+            logger.error(error_list_obj)
 
     async def get_html_content(self, site_url):
         try:

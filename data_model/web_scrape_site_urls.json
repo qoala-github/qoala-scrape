@@ -1,6 +1,6 @@
 [
   {
-    "site_no": "1",
+    "company_no": "1",
     "site_name": "adidas",
     "site_host": "adidas",
    "web_scrape_key_elements": [
@@ -78,7 +78,7 @@
     ]
   },
   {
-    "site_no": "2",
+    "company_no": "2",
     "site_name": "asos",
     "site_host": "asos",
     "web_scrape_key_elements":[
@@ -123,7 +123,7 @@
     ]
   },
   {
-    "site_no": "3",
+    "company_no": "3",
     "site_name": "booking",
     "site_host": "booking",
     "web_scrape_key_elements":[
@@ -168,7 +168,7 @@
     ]
   },
   {
-    "site_no": "4",
+    "company_no": "4",
     "site_name": "decathlon",
     "site_host": "decathlon",
     "web_scrape_key_elements":[
@@ -213,7 +213,7 @@
     ]
   },
   {
-    "site_no": "5",
+    "company_no": "5",
     "site_name": "elcorteingles",
     "site_host": "elcorteingles",
     "web_scrape_key_elements":[
@@ -258,7 +258,7 @@
     ]
   },
   {
-    "site_no": "6",
+    "company_no": "6",
     "site_name": "fnac",
     "site_host": "fnac",
     "web_scrape_key_elements":[
@@ -341,7 +341,7 @@
     ]
   },
   {
-    "site_no": "7",
+    "company_no": "7",
     "site_name": "gearbest",
     "site_host": "gearbest",
     "web_scrape_key_elements":[
@@ -386,7 +386,7 @@
     ]
   },
   {
-    "site_no": "8",
+    "company_no": "8",
     "site_name": "ikea",
     "site_host": "ikea",
     "web_scrape_key_elements":[
@@ -431,7 +431,7 @@
     ]
   },
   {
-    "site_no": "9",
+    "company_no": "9",
     "site_name": "joom",
     "site_host": "joom",
     "web_scrape_key_elements":[
@@ -509,7 +509,7 @@
     ]
   },
   {
-    "site_no": "10",
+    "company_no": "10",
     "site_name": "leroymerlin",
     "site_host": "leroymerlin",
     "web_scrape_key_elements":[
@@ -554,7 +554,7 @@
     ]
   },
   {
-    "site_no": "11",
+    "company_no": "11",
     "site_name": "mediamarkt",
     "site_host": "mediamarkt",
      "web_scrape_key_elements":[
@@ -599,7 +599,7 @@
     ]
   },
   {
-    "site_no": "12",
+    "company_no": "12",
     "site_name": "Nike",
     "site_host": "nike",
    "web_scrape_key_elements":[
@@ -720,7 +720,7 @@
     ]
   },
   {
-    "site_no": "13",
+    "company_no": "13",
     "site_name": "playstation",
     "site_host": "playstation",
      "web_scrape_key_elements":[
@@ -765,7 +765,7 @@
     ]
   },
   {
-    "site_no": "14",
+    "company_no": "14",
     "site_name": "ryanair",
     "site_host": "ryanair",
     "scrape_filters": [
@@ -810,7 +810,7 @@
         ]
   },
   {
-    "site_no": "15",
+    "company_no": "15",
     "site_name": "samsung",
     "site_host": "samsung",
     "web_scrape_key_elements": [
@@ -926,7 +926,7 @@
     ]
   },
   {
-    "site_no": "16",
+    "company_no": "16",
     "site_name": "skyscanner",
     "site_host": "skyscanner",
     "web_scrape_key_elements": [
@@ -1047,7 +1047,7 @@
     ]
   },
   {
-    "site_no": "17",
+    "company_no": "17",
     "site_name": "supermercadosdia",
     "site_host": "supermercadosdia",
      "web_scrape_key_elements": [
@@ -1130,7 +1130,7 @@
     ]
   },
   {
-    "site_no": "18",
+    "company_no": "18",
     "site_name": "tradeinn",
     "site_host": "knoji",
     "web_scrape_key_elements": [
@@ -1208,7 +1208,7 @@
     ]
   },
   {
-    "site_no": "19",
+    "company_no": "19",
     "site_name": "zalando",
     "site_host": "zalando",
    "web_scrape_key_elements": [
@@ -1631,135 +1631,84 @@
     ]
   },
   {
-    "site_no": "20",
+    "company_no": "20",
     "site_name": "zara",
     "site_host": "zara",
-    "web_scrape_key_elements":[
-      {
-        "site_url": "https://www.zara.com/ww/#utm_referrer=https%3A%2F%2Fwww.google.com%2F",
+    "web_scrape_key_elements": [
+     {
+        "site_url": "https://www.zara.com/uk/en/woman-special-prices-l1314.html",
         "scrape_filters": [
-          {
-            "text_type": "description",
-            "property_filter": [
-              {
-                "tag_name": "h2",
+           {
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "product-info"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
+                    "search_key":  "product-name"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key": "product-info-item-label"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "product-info-item-label"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "product-info-item-label"
                   }
                 ]
               }
-            ]
-          },
-          {
-            "text_type": "code",
-            "property_filter": [
-              {
-                "tag_name": "div",
+        ]
+      },
+      {
+        "site_url": "https://www.forbes.com/coupons/zara.com/",
+        "scrape_filters": [
+           {
                 "parent_node": {
+                  "tag_name": "div",
                   "prop": "class",
-                  "search_key": "poster_content___39q_N"
+                  "search_key": "promotion-discount-card__main"
                 },
                 "prop_list": [
                   {
+                    "text_type": "description",
+                    "tag_name": "h3",
                     "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
+                    "search_key":  "promotion-discount-card__info__title mb-3"
                   },
                   {
+                    "text_type": "code",
+                    "tag_name": "",
+                    "prop": "",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key": "_3wU53n"
+                    "search_key":  "promotion-discount-card__info__description"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "promotion-discount-card__info__description"
                   }
                 ]
               }
-            ]
-          },
-          {
-            "text_type": "terms",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "text_type": "expiry",
-            "property_filter": [
-              {
-                "tag_name": "h2",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "title___1vL99 withhtml___3nraa gl-heading--l"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              },
-              {
-                "tag_name": "div",
-                "parent_node": {
-                  "prop": "class",
-                  "search_key": "poster_content___39q_N"
-                },
-                "prop_list": [
-                  {
-                    "prop": "class",
-                    "search_key": "summary___37JYH gl-body--l withhtml___3nraa"
-                  },
-                  {
-                    "prop": "class",
-                    "search_key": "_3wU53n"
-                  }
-                ]
-              }
-            ]
-          }
         ]
       }
     ]
