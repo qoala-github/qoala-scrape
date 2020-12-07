@@ -1,80 +1,118 @@
 [
-  {
-    "site_no": "20",
-    "site_name": "zara",
-    "site_host": "zara",
-    "web_scrape_key_elements": [
-     {
-        "site_url": "https://www.zara.com/uk/en/woman-special-prices-l1314.html",
+ {
+    "company_no": "12",
+    "site_name": "Nike",
+    "site_host": "nike",
+   "web_scrape_key_elements":[
+      {
+        "site_url": "https://www.nike.com/promo-code",
         "scrape_filters": [
            {
                 "parent_node": {
-                  "tag_name": "div",
+                  "tag_name": "figure",
                   "prop": "class",
-                  "search_key": "product-info"
+                  "search_key": "image-card _3l8ZuNi4"
                 },
                 "prop_list": [
                   {
                     "text_type": "description",
-                    "tag_name": "span",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key":  "product-name"
+                    "search_key":  "_3T7SP3hk"
                   },
                   {
                     "text_type": "code",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": "product-info-item-label"
+                    "search_key":  "_3T7SP3hk"
                   },
                   {
                     "text_type": "terms",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": "product-info-item-label"
+                    "search_key":  "_3T7SP3hk"
                   },
                   {
                     "text_type": "expiry",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key": "product-info-item-label"
+                    "search_key":  "_3T7SP3hk"
+                  }
+                ]
+              }
+        ]
+      },
+       {
+        "site_url": "https://www.nike.com/w/cyber-monday-95xas",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "header",
+                  "prop": "class",
+                  "search_key": "wall-header"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key":  "wall-header__title"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key":  "wall-header__title"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key":  "wall-header__title"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key":  "wall-header__title"
                   }
                 ]
               }
         ]
       },
       {
-        "site_url": "https://www.forbes.com/coupons/zara.com/",
+        "site_url": "https://www.nike.com/",
         "scrape_filters": [
            {
                 "parent_node": {
                   "tag_name": "div",
                   "prop": "class",
-                  "search_key": "promotion-discount-card__main"
+                  "search_key": "swiper-wrapper"
                 },
                 "prop_list": [
                   {
                     "text_type": "description",
-                    "tag_name": "h3",
+                    "tag_name": "span",
                     "prop": "class",
-                    "search_key":  "promotion-discount-card__info__title mb-3"
+                    "search_key":  "_2vXfoh-O"
                   },
                   {
                     "text_type": "code",
-                    "tag_name": "",
-                    "prop": "",
-                    "search_key": ""
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "_8gPPHhHw"
                   },
                   {
                     "text_type": "terms",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key":  "promotion-discount-card__info__description"
+                    "search_key":  "_8gPPHhHw"
                   },
                   {
                     "text_type": "expiry",
                     "tag_name": "div",
                     "prop": "class",
-                    "search_key":  "promotion-discount-card__info__description"
+                    "search_key":  "_8gPPHhHw"
                   }
                 ]
               }

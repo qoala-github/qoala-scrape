@@ -726,7 +726,7 @@
      "web_scrape_key_elements":[
       {
         "site_url": "https://store.playstation.com/en-us/deals",
-       "scrape_filters": [
+         "scrape_filters": [
             {
                 "parent_node": {
                   "tag_name": "section",
@@ -768,46 +768,122 @@
     "company_no": "14",
     "site_name": "ryanair",
     "site_host": "ryanair",
-    "scrape_filters": [
-          {
-
-            "property_filter": [
+    "web_scrape_key_elements":[
+      {
+        "site_url": "https://www.ryanair.com/gb/en/plan-trip/explore/promotions",
+        "scrape_filters": [
               {
                 "parent_node": {
-                  "tag_name": "div",
+				  "tag_name": "div",
                   "prop": "class",
                   "search_key": "textandtitle_container"
                 },
                 "prop_list": [
                   {
                     "text_type": "description",
-                    "tag_name": "div",
                     "prop": "class",
-                    "search_key":  "textandtitle_textcontent"
+                    "tag_name": "div",
+                    "search_key": "textandtitle_textcontent"
                   },
-                  {
-                    "text_type": "code",
-                    "tag_name": "div",
+				  {
+				   "text_type": "code",
                     "prop": "class",
-                    "search_key":  "textandtitle_textcontent"
+					"tag_name": "div",
+                    "search_key": "textandtitle_textcontent"
                   },
-                  {
-                    "text_type": "terms",
-                    "tag_name": "div",
+				  {
+				   "text_type": "terms",
                     "prop": "class",
-                    "search_key":  "textandtitle_textcontent"
+					"tag_name": "div",
+                    "search_key": "textandtitle_textcontent"
                   },
-                  {
-                    "text_type": "expiry",
-                    "tag_name": "div",
+				  {
+				   "text_type": "expiry",
                     "prop": "class",
-                    "search_key":  "textandtitle_textcontent"
+					"tag_name": "div",
+                    "search_key": "textandtitle_textcontent"
                   }
                 ]
               }
             ]
-          }
-        ]
+      },
+      {
+        "site_url": "https://www.ryanair.com/gb/en/special-offer/buyonegetonefree",
+        "scrape_filters": [
+              {
+                "parent_node": {
+				  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "textandimage-component"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "prop": "class",
+                    "tag_name": "div",
+                    "search_key": "textandimage-header"
+                  },
+				  {
+				   "text_type": "code",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandimage-header"
+                  },
+				  {
+				   "text_type": "terms",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandimage-textcontent"
+                  },
+				  {
+				   "text_type": "expiry",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandimage-textcontent"
+                  }
+                ]
+              }
+            ]
+      },
+      {
+        "site_url": "https://www.ryanair.com/gb/en/special-offer/destinations-on-sale",
+        "scrape_filters": [
+              {
+                "parent_node": {
+				  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "textandtitle_container"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "prop": "class",
+                    "tag_name": "div",
+                    "search_key": "textandtitle_header"
+                  },
+				  {
+				   "text_type": "code",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandtitle_header"
+                  },
+				  {
+				   "text_type": "terms",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandtitle_header"
+                  },
+				  {
+				   "text_type": "expiry",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandtitle_header"
+                  }
+                ]
+              }
+            ]
+      }
+    ]
   },
   {
     "company_no": "15",

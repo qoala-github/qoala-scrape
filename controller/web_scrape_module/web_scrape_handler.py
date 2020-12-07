@@ -1,3 +1,4 @@
+import datetime
 import sys
 import traceback
 import requests
@@ -27,6 +28,15 @@ web_driver_path = app_settings.SELENIUM_WEB_DRIVER_PATH
 options = webdriver.FirefoxOptions()
 # options.add_argument('-headless')
 page_load_timeout = app_settings.SITE_LOAD_TIMEOUT
+max_exp_date_para_len = app_settings.EXP_DATE_MAX_PARAGRAPH_LEN
+
+# Get 2 weeks future date from today=>Client requirement
+current_utc = datetime.datetime.strptime(str(datetime.datetime.utcnow().date()), "%Y-%m-%d")
+current_utc_with_time = datetime.datetime.utcnow()
+date_diff = datetime.timedelta(weeks=2)
+exp_date_utc = current_utc + date_diff
+exp_date_split = str(exp_date_utc).split(' ')
+formatted_exp_date = f"{exp_date_split[0]}T{exp_date_split[1]}Z"
 
 
 class WebScrapeHandler:
@@ -58,7 +68,6 @@ class WebScrapeHandler:
                     site_name = com_obj.get('site_name')
                     site_host = com_obj.get('site_host')
                     target_elem = com_obj.get('web_scrape_key_elements')
-                    df = None
 
                     for i in range(len(target_elem)):
                         try:
@@ -81,7 +90,6 @@ class WebScrapeHandler:
                             soup = await self.get_html_content(site_url)
 
                             for sf in range(len(scrape_filters)):
-
                                 try:
                                     loop_ref = f"company_counter:{c},main_loop_counter:{i},sf_loop_counter:{sf}"
                                     print(loop_ref)
@@ -126,6 +134,7 @@ class WebScrapeHandler:
                                             coupon_code_txt = coupon_code.get(
                                                 'value') if coupon_code is not None and len(
                                                 coupon_code_txt.strip()) == 0 else coupon_code_txt
+                                            coupon_code_txt = "" if coupon_code_txt is None else coupon_code_txt
 
                                             descr_text = self.get_description(
                                                 description.text) if description is not None else ""
@@ -165,12 +174,16 @@ class WebScrapeHandler:
                     print(msg)
                     logger.error(msg)
 
+            print(f"error_list:{error_list}")
             if len(error_list) > 0:
-                error_list_obj = {'error_guid': error_guid, 'error_list': error_list}
-                json.dum
-                logger.error(error_list_obj)
+                error_list_obj = {'error_guid': str(error_guid), 'error_list': error_list}
+                await self.save_json_as_file(error_list_obj, f'logs/{str(error_guid)}.json')
 
             print(f"main_list:{main_list},no_of_items:{len(main_list)}")
+            if len(main_list) > 0:
+                error_list_obj = {'time_stamp': str(current_utc_with_time), 'site_coupon_list': main_list}
+                await self.save_json_as_file(error_list_obj, f'logs/{str(error_guid)}_payload.json')
+
             return main_list
         except Exception:
             msg = f'WebScrapeHandler=>fetch_site_data()=>before_loop=>error_guid:{error_guid},loop_number:{loop_ref}:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
@@ -280,12 +293,24 @@ class WebScrapeHandler:
     def get_expiry_date(self, exp_date_text):
         try:
             result = ""
+
             if exp_date_text is not None:
                 data_keys = promo_keyword_json["expiry"].get('keyword_list')
-                result = "2020-12-31T00:00:00Z" if self.is_keyword_found(data_keys, exp_date_text) else ""
+                result = exp_date_text if self.is_keyword_found(data_keys, exp_date_text) else ""
+                result = formatted_exp_date if len(exp_date_text) > max_exp_date_para_len else result
                 return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
             msg = f'WebScrapeHandler=>get_expiry_date()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
+            print(msg)
+            logger.error(msg)
+
+    async def save_json_as_file(self, json_obj, file_path):
+        try:
+            logger.info(json_obj)
+            with open(file_path, 'w') as outfile:
+                json.dump(json_obj, outfile)
+        except Exception:
+            msg = f'WebScrapeHandler=>save_json_as_file()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
             print(msg)
             logger.error(msg)
 
@@ -298,11 +323,14 @@ class WebScrapeHandler:
             # NOTE : Currently, no access token is required
             access_token = "not_required"  # self.get_access_token()
 
-            if (access_token is not None and access_token != "error"):
+            if access_token is not None and access_token != "error":
                 msg = f"Successfully received access_token={access_token}"
                 print(msg)
                 logger.info(msg)
-                if self.post_web_scrape_data(auth_token=access_token, web_scrape_data=res):
+
+                res = await self.post_web_scrape_data(auth_token=access_token, web_scrape_data=res)
+
+                if res:
                     # Successfully posted the web scrape data
                     success_msg = "Publicó con éxito los datos del raspado de la web"
                     logger.info(f"{msg},{success_msg}")
@@ -352,7 +380,7 @@ class WebScrapeHandler:
             logger.error(msg)
             return "error"
 
-    def post_web_scrape_data(self, auth_token, web_scrape_data):
+    async def post_web_scrape_data(self, auth_token, web_scrape_data):
         try:
             msg = f"Inside post_web_scrape_data()=>auth_token={auth_token}"
             print(msg)
@@ -367,12 +395,13 @@ class WebScrapeHandler:
             logger.info(msg)
             res = None
             headers_param = {"Content-type": "application/json"} if auth_token == "not_required" else {
-                "Authorization": "Bearer %s" % auth_token, "Content-type": "application/json"}
+                "Authorization": f"Bearer {auth_token}", "Content-type": "application/json"}
             msg = f"headers_param:{headers_param}"
             print(msg)
             logger.info(msg)
-            res = requests.post(req_url, data=body_data,
-                                headers=headers_param)
+
+            res = await requests.post(req_url, data=body_data,
+                                      headers=headers_param)
             msg = f"res_status={res.status_code}, res-reason={res.reason}, res_text={res.text}"
             print(msg)
             logger.info(msg)

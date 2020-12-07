@@ -14,3 +14,4 @@ class AppSetting:
     SITE_LOAD_TIMEOUT = 30  # Page load timeout in seconds
     SITE_HOST = '127.0.0.1'
     SITE_HOST_PORT = 8000
+    EXP_DATE_MAX_PARAGRAPH_LEN = 30
