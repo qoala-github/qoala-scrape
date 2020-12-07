@@ -5,6 +5,7 @@ import requests
 import json
 import logging
 import uuid
+import http3
 
 from bs4 import BeautifulSoup
 from fastapi import HTTPException
@@ -328,19 +329,18 @@ class WebScrapeHandler:
                 print(msg)
                 logger.info(msg)
 
-                res = await self.post_web_scrape_data(auth_token=access_token, web_scrape_data=res)
+                result_status, result_msg = await self.post_web_scrape_data(auth_token=access_token,
+                                                                            web_scrape_data=res)
 
-                if res:
+                if result_status == "success":
                     # Successfully posted the web scrape data
-                    success_msg = "Publicó con éxito los datos del raspado de la web"
-                    logger.info(f"{msg},{success_msg}")
-                    return {"Message": success_msg}
+                    logger.info(f"{msg},{result_msg}")
+                    return {"Message": result_msg}
                 else:
                     # An Error occurred while posting the web scrape data
-                    msg = "Se produjo un error al publicar los datos del web scrape"
-                    print(msg)
-                    logger.error(msg)
-                    raise HTTPException(status_code=400, detail=msg)
+                    print(result_msg)
+                    logger.error(result_msg)
+                    raise HTTPException(status_code=400, detail=result_msg)
             else:
                 msg = "Ficha de acceso inválida"
                 print(msg)
@@ -399,18 +399,39 @@ class WebScrapeHandler:
             msg = f"headers_param:{headers_param}"
             print(msg)
             logger.info(msg)
+            post_data_batch_list = []
+            data_batch_01 = json.dumps(json.loads(body_data)[0:11])
+            post_data_batch_list.append(data_batch_01)
+            data_batch_02 = json.dumps(json.loads(body_data)[11:21])
+            post_data_batch_list.append(data_batch_02)
+            client = http3.AsyncClient()
+            batch_error_count: int = 0
 
-            res = await requests.post(req_url, data=body_data,
-                                      headers=headers_param)
-            msg = f"res_status={res.status_code}, res-reason={res.reason}, res_text={res.text}"
-            print(msg)
-            logger.info(msg)
-            if res.status_code == 200:
-                return True
-            else:
-                return False
+            for i in range(len(post_data_batch_list)):
+                try:
+                    data_batch = post_data_batch_list[i]
+                    # NOTE : If the list is empty then the string is '[]' which is a string of length 2
+                    if data_batch is not None and len(data_batch) > 2:
+                        res = await client.post(url=req_url, data=data_batch,
+                                                headers=headers_param)
+                        print(f"res:{res}")
+                        msg = f"res_status={res.status_code}, res-reason={res.reason_phrase}, res_text={res.text}"
+                        print(msg)
+                        logger.info(msg)
+                        if res.status_code == 200:
+                            batch_error_count += 0
+                        else:
+                            batch_error_count += 1
+                except Exception:
+                    msg = f'WebScrapeHandler=>post_web_scrape_data():Data batch loop=>Data batch{i + 1}{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
+                    print(msg)
+                    logger.error(msg)
+
+            result_message = "Publicó con éxito los datos del raspado de la web" if batch_error_count == 0 else f"{batch_error_count} de cada {len(post_data_batch_list)} lotes de datos no se cargaron"
+            result_status = "success" if batch_error_count == 0 else "error"
+            return result_status, result_message
         except Exception:
-            msg = f'WebScrapeHandler=>get_access_token():{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
+            msg = f'WebScrapeHandler=>post_web_scrape_data():{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
             print(msg)
             logger.error(msg)
-            return False
+            return "error", "Se produjo un error al publicar los datos del web scrape"
