@@ -41,7 +41,45 @@
                 ]
               }
         ]
+      },
+      {
+        "site_url": "https://www.nike.com/w/cyber-monday-95xas",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "header",
+                  "prop": "class",
+                  "search_key": "wall-header"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key":  "wall-header__title"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key":  "wall-header__title"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key":  "wall-header__title"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key":  "wall-header__title"
+                  }
+                ]
+              }
+        ]
       }
-    ]
+   ]
   }
 ]
