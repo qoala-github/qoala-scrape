@@ -80,7 +80,6 @@ class WebScrapeHandler:
         except Exception:
             msg = f'WebScrapeHandler=>fetch_site_data()=>before_loop=>error_guid:{error_guid},loop_number:{loop_ref}:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
             self.error_list.append(msg)
-            error_list_obj = {'error_guid': error_guid, 'error_list': self.error_list}
             print(msg)
             logger.error(msg)
             self.error_list.append(
@@ -416,7 +415,6 @@ class WebScrapeHandler:
             msg = {"req_url": req_url, "auth_token": auth_token, "data": body_data}
             print(msg)
             logger.info(msg)
-            res = None
             headers_param = {"Content-type": "application/json"} if auth_token == "not_required" else {
                 "Authorization": f"Bearer {auth_token}", "Content-type": "application/json"}
             msg = f"headers_param:{headers_param}"
@@ -429,13 +427,19 @@ class WebScrapeHandler:
 
             for i in range(len(post_data_batch_list)):
                 try:
+                    msg = f"Fetching data batch:{i + 1}"
+                    print(msg)
+                    logger.info(msg)
                     data_batch = post_data_batch_list[i]
                     # NOTE : If the list is empty then the string is '[]' which is a string of length 2
                     if data_batch is not None and len(data_batch) > 2:
+                        msg = f"Data batch {i + 1} is valid"
+                        print(msg)
+                        logger.info(msg)
                         res = await client.post(url=req_url, data=data_batch,
                                                 headers=headers_param)
                         print(f"res:{res}")
-                        msg = f"res_status={res.status_code}, res-reason={res.reason_phrase}, res_text={res.text}"
+                        msg = f"data_batch:{i+1},res_status={res.status_code}, res-reason={res.reason_phrase}, res_text={res.text}"
                         print(msg)
                         logger.info(msg)
                         if res.status_code == 200:
@@ -446,7 +450,9 @@ class WebScrapeHandler:
                     msg = f'WebScrapeHandler=>post_web_scrape_data():Data batch loop=>Data batch{i + 1}{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
                     print(msg)
                     logger.error(msg)
-
+            msg = f"dat_batch_error_count={batch_error_count}"
+            print(msg)
+            logger.info(msg)
             result_message = "Publicó con éxito los datos del raspado de la web" if batch_error_count == 0 else f"{batch_error_count} de cada {len(post_data_batch_list)} lotes de datos no se cargaron"
             result_status = "success" if batch_error_count == 0 else "error"
             return result_status, result_message
