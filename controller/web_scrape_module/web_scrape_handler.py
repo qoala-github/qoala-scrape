@@ -64,15 +64,16 @@ class WebScrapeHandler:
                 try:
                     com_obj = company_site_list[c]
                     print(com_obj)
+                    logger.info(com_obj)
                     company_no = com_obj.get('company_no')
                     site_name = com_obj.get('site_name')
                     site_host = com_obj.get('site_host')
                     target_elem = com_obj.get('web_scrape_key_elements')
                     await self.read_web_scrape_elements(company_no, site_name, site_host, target_elem)
-                except Exception:  # company loop exception
+                except Exception:
                     msg = f'WebScrapeHandler=>fetch_site_data()=>company_loop=>{loop_ref}:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
                     self.error_list.append(
-                        {'error_loop_level': 'company', 'company_no': company_no, 'company_name': site_name,
+                        {'error_loop_level': 'company_loop', 'company_no': company_no, 'company_name': site_name,
                          'error_msg': msg})
                     print(msg)
                     logger.error(msg)
@@ -82,7 +83,7 @@ class WebScrapeHandler:
             print(msg)
             logger.error(msg)
             self.error_list.append(
-                {'error_loop_level': 'company', 'company_no': company_no, 'company_name': site_name,
+                {'error_loop_level': 'fetch_site_data,before_loop', 'company_no': '', 'company_name': '',
                  'error_msg': msg})
 
         finally:
