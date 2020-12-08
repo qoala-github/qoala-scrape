@@ -1,4 +1,5 @@
 # 1. Library imports
+import datetime
 import json
 import sys
 import traceback
@@ -151,18 +152,34 @@ def get_hashed_password(password):
 @app.post("/web_scrape/send")
 async def fetch_and_send_web_scrape_data():
     try:
+        start_time = datetime.datetime.utcnow()
+        msg = f"Web scrape process started at {start_time} UTC"
+        print(msg)
+        logger.info(msg)
+
         web_scrape_handler = WebScrapeHandler()
         result = await web_scrape_handler.send_promotion_data()
         print(f"result:{result}")
         logger.info(f"Success:{result}")
+
+        end_time = datetime.datetime.utcnow()
+        msg = f"Web scrape process finished at {end_time} UTC"
+        print(msg)
+        logger.info(msg)
+
+        time_diff = end_time - start_time
+        msg = f"Total duration=>{time_diff}"
+        print(msg)
+        logger.info(msg)
+
         return result
     except Exception:
         msg = f'WebScrapeHandler=>send_promotion_data()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
         print(msg)
         logger.error(msg)
-        raise HTTPException(status_code=400, detail="Ocurrió un error inesperado")  #An unexpected error occured
+        raise HTTPException(status_code=400, detail="Ocurrió un error inesperado")  # An unexpected error occured
 
 
 if __name__ == '__main__':
     uvicorn.run(app)
-    #uvicorn.run(app, host=app_settings.SITE_HOST, port=app_settings.SITE_HOST_PORT)
+    # uvicorn.run(app, host=app_settings.SITE_HOST, port=app_settings.SITE_HOST_PORT)
