@@ -69,7 +69,6 @@ class WebScrapeHandler:
                     site_host = com_obj.get('site_host')
                     target_elem = com_obj.get('web_scrape_key_elements')
                     await self.read_web_scrape_elements(company_no, site_name, site_host, target_elem)
-                    self.main_list.append()
                 except Exception:  # company loop exception
                     msg = f'WebScrapeHandler=>fetch_site_data()=>company_loop=>{loop_ref}:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
                     self.error_list.append(
