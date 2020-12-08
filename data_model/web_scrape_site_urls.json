@@ -363,9 +363,9 @@
                   },
                   {
                     "text_type": "code",
-                    "tag_name": "span",
+                    "tag_name": "div",
                     "prop": "class",
-                    "search_key":  "compItem_couponCode"
+                    "search_key":  "compItem_couponHandle"
                   },
                   {
                     "text_type": "terms",

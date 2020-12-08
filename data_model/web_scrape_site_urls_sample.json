@@ -1,85 +1,47 @@
 [
- {
-    "company_no": "12",
-    "site_name": "Nike",
-    "site_host": "nike",
-   "web_scrape_key_elements":[
+  {
+    "company_no": "7",
+    "site_name": "gearbest",
+    "site_host": "gearbest",
+    "web_scrape_key_elements": [
       {
-        "site_url": "https://www.nike.com/promo-code",
+        "site_url": "https://www.gearbest.com/coupon.html",
         "scrape_filters": [
-           {
-                "parent_node": {
-                  "tag_name": "figure",
-                  "prop": "class",
-                  "search_key": "image-card _3l8ZuNi4"
-                },
-                "prop_list": [
-                  {
-                    "text_type": "description",
-                    "tag_name": "div",
-                    "prop": "class",
-                    "search_key":  "_3T7SP3hk"
-                  },
-                  {
-                    "text_type": "code",
-                    "tag_name": "div",
-                    "prop": "class",
-                    "search_key":  "_3T7SP3hk"
-                  },
-                  {
-                    "text_type": "terms",
-                    "tag_name": "div",
-                    "prop": "class",
-                    "search_key":  "_3T7SP3hk"
-                  },
-                  {
-                    "text_type": "expiry",
-                    "tag_name": "div",
-                    "prop": "class",
-                    "search_key":  "_3T7SP3hk"
-                  }
-                ]
+          {
+            "parent_node": {
+              "tag_name": "div",
+              "prop": "class",
+              "search_key": "compItem_a3"
+            },
+            "prop_list": [
+              {
+                "text_type": "description",
+                "tag_name": "div",
+                "prop": "class",
+                "search_key": "compItem_titleWrap"
+              },
+              {
+                "text_type": "code",
+                "tag_name": "span",
+                "prop": "class",
+                "search_key": "compItem_couponCode"
+              },
+              {
+                "text_type": "terms",
+                "tag_name": "div",
+                "prop": "class",
+                "search_key": "compItem_couponLeft"
+              },
+              {
+                "text_type": "expiry",
+                "tag_name": "div",
+                "prop": "class",
+                "search_key": "compItem_couponLeft"
               }
-        ]
-      },
-      {
-        "site_url": "https://www.nike.com/w/cyber-monday-95xas",
-        "scrape_filters": [
-           {
-                "parent_node": {
-                  "tag_name": "header",
-                  "prop": "class",
-                  "search_key": "wall-header"
-                },
-                "prop_list": [
-                  {
-                    "text_type": "description",
-                    "tag_name": "h1",
-                    "prop": "class",
-                    "search_key":  "wall-header__title"
-                  },
-                  {
-                    "text_type": "code",
-                    "tag_name": "h1",
-                    "prop": "class",
-                    "search_key":  "wall-header__title"
-                  },
-                  {
-                    "text_type": "terms",
-                    "tag_name": "h1",
-                    "prop": "class",
-                    "search_key":  "wall-header__title"
-                  },
-                  {
-                    "text_type": "expiry",
-                    "tag_name": "h1",
-                    "prop": "class",
-                    "search_key":  "wall-header__title"
-                  }
-                ]
-              }
+            ]
+          }
         ]
       }
-   ]
+    ]
   }
-]
+  ]
