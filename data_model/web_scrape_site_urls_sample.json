@@ -1,0 +1,47 @@
+[
+  {
+    "company_no": "7",
+    "site_name": "gearbest",
+    "site_host": "gearbest",
+    "web_scrape_key_elements": [
+      {
+        "site_url": "https://www.gearbest.com/coupon.html",
+        "scrape_filters": [
+          {
+            "parent_node": {
+              "tag_name": "div",
+              "prop": "class",
+              "search_key": "compItem_a3"
+            },
+            "prop_list": [
+              {
+                "text_type": "description",
+                "tag_name": "div",
+                "prop": "class",
+                "search_key": "compItem_titleWrap"
+              },
+              {
+                "text_type": "code",
+                "tag_name": "span",
+                "prop": "class",
+                "search_key": "compItem_couponCode"
+              },
+              {
+                "text_type": "terms",
+                "tag_name": "div",
+                "prop": "class",
+                "search_key": "compItem_couponLeft"
+              },
+              {
+                "text_type": "expiry",
+                "tag_name": "div",
+                "prop": "class",
+                "search_key": "compItem_couponLeft"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  ]

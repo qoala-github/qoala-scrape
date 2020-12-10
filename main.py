@@ -1,4 +1,5 @@
 # 1. Library imports
+import datetime
 import json
 import sys
 import traceback
@@ -14,6 +15,7 @@ from passlib.context import CryptContext
 from datetime import timedelta
 from loguru import logger
 from bs4 import BeautifulSoup
+from requests import Response
 
 from app_configurations.logging_setup.custom_logging import CustomizeLogger, LogFileViewer
 from controller.authorization.api_token_manager import Token, TokenData, TokenCoreManager
@@ -147,27 +149,37 @@ def get_hashed_password(password):
     return {'actual_password': password, 'hashed_password': pwd_context.hash(password)}
 
 
-@app.get("/webscrape/test")
-def get_web_scrape_test():
-    """
-    user_agent = app_settings.WEB_SCRAPE_USER_AGENT
-    headers = {"user-agent": user_agent}
-    site_url = 'https://www.adidas.com/us/promotions'
-    req = requests.get(site_url, headers=headers)
-    soup = BeautifulSoup(req.text, "html.parser")
-    ele_list = soup.find_all('h2', attrs={'class': 'title___1vL99 withhtml___3nraa gl-heading--l'})
-    list_obj = [{"tag-data": str(e.text)} for e in ele_list]
-    print(f"list_obj:{list_obj}")
-    json_res = json.dumps(list_obj)
-    print(type(list_obj))
-    """
-    web_scrape_handler = WebScrapeHandler()
-    result = web_scrape_handler.fetch_site_data()
-    print(f"result:{result}")
-    res = json.dumps(result)
-    print(type(result))
-    return {'result': res}
+@app.post("/web_scrape/send")
+async def fetch_and_send_web_scrape_data():
+    try:
+        start_time = datetime.datetime.utcnow()
+        msg = f"Web scrape process started at {start_time} UTC"
+        print(msg)
+        logger.info(msg)
+
+        web_scrape_handler = WebScrapeHandler()
+        result = await web_scrape_handler.send_promotion_data()
+        print(f"result:{result}")
+        logger.info(f"Success:{result}")
+
+        end_time = datetime.datetime.utcnow()
+        msg = f"Web scrape process finished at {end_time} UTC"
+        print(msg)
+        logger.info(msg)
+
+        time_diff = end_time - start_time
+        msg = f"Total duration=>{time_diff}"
+        print(msg)
+        logger.info(msg)
+
+        return result
+    except Exception:
+        msg = f'WebScrapeHandler=>send_promotion_data()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
+        print(msg)
+        logger.error(msg)
+        raise HTTPException(status_code=400, detail="Ocurrió un error inesperado")  # An unexpected error occured
 
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='127.0.0.1', port=8000)
+    uvicorn.run(app)
+    # uvicorn.run(app, host=app_settings.SITE_HOST, port=app_settings.SITE_HOST_PORT)
