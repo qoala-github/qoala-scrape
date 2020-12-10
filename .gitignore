@@ -12,6 +12,7 @@
 /.vs
 /app_configurations/logging_setup/__pycache__/custom_logging.cpython-38.pyc
 /controller/authorization/__pycache__/api_token_manager.cpython-38.pyc
+/controller/user/__pycache__
 /controller/user/__pycache__/user_data.cpython-38.pyc
 /controller/web_scrape_module/__pycache__/web_scrape_handler.cpython-38.pyc
 /logs
