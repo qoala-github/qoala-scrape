@@ -1,0 +1,19 @@
+{
+  "description": {
+    "keyword_list": ["promotion","promotions","deals","deal","coupon", "coupons",
+                     "offer", "offers","off","men","women","boys","girls","children",
+                      "kids","infants","christmas","noël","reduce","reduction",
+                      "save","sale","summer","new year","men","women","fashion","men's","women's",
+                       "price drop","price","drop","black friday"]
+  },
+   "coupon_code": {
+    "keyword_list": ["coupon code","promo code","coupon codes","promo codes","coupon"],
+     "invalid_key_list": ["%","$","lkr","€"]
+   },
+  "terms": {
+    "keyword_list": ["terms","conditions","terms and conditions","terms & conditions","valid","valid until","valid till","apply","exclusions","starting at","$","lkr","%","€","limited","while stocks last","left","ends","sale ends"]
+  },
+  "expiry": {
+    "keyword_list": ["expires","expiry","expire","expiration","expired","december","dec","nov","2020","november"]
+  }
+}

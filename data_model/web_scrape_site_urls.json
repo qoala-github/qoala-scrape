@@ -1,621 +1,1791 @@
 [
-   {
-    "site_no": "1",
+  {
+    "company_no": "1",
     "site_name": "adidas",
-    "site_url": ["https://www.adidas.com/us/promotions"],
     "site_host": "adidas",
-    "web_scrape_key_elements": [
-      {
-        "text_type": "description",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "code",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      }
-    ]
-  },
-   {
-    "site_no": "2",
-    "site_name": "asos",
-    "site_url": ["https://www.asos.com/?channelref=paid+search&affid=12496&ppcadref=9826306283%7c98328406045%7ckwd-297372148208&gclid=EAIaIQobChMIhYrDm56J7QIVCdiWCh19oQWgEAAYASAAEgI33vD_BwE&gclsrc=aw.ds"],
-    "site_host": "asos",
-    "web_scrape_key_elements": [
-      {
-        "text_type": "description",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "code",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      }
-    ]
-  },
-  {
-    "site_no": "3",
-    "site_name": "booking",
-    "site_url": ["https://www.booking.com/index.html?aid=309654;label=booking-be-en-ausnz-bJBCeRsgTQ0TizKsbO3PpAS460970376600:pl:ta:p1:p22,563,000:ac:ap:neg:fi:tikwd-26750733231:lp1009919:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YcsZ-Id2vkzIfTmYhvC5HOg;ws=&gclid=EAIaIQobChMIt-SUyZ6J7QIVyamWCh1amQcKEAAYAyAAEgJ7zvD_BwE"],
-    "site_host": "booking",
-    "web_scrape_key_elements": [
-      {
-        "text_type": "description",
-       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "code",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      }
-    ]
-  },
-  {
-    "site_no": "4",
-    "site_name": "decathlon",
-    "site_url": ["https://www.decathlon.my/page/promotions.html"],
-    "site_host": "decathlon",
-     "web_scrape_key_elements": [
-      {
-        "text_type": "description",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "code",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      }
-    ]
-  },
-  {
-    "site_no": "5",
-    "site_name": "elcorteingles",
-    "site_url": ["https://www.elcorteingles.com/en/prices-worth-celebrating/"],
-    "site_host": "elcorteingles",
-     "web_scrape_key_elements": [
-      {
-        "text_type": "description",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "code",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      }
-    ]
-  },
-   {
-    "site_no": "6",
-    "site_name": "fnac",
-    "site_url": ["https://www.fnac.com/destockage/"],
-    "site_host": "fnac",
-    "web_scrape_key_elements": [
-      {
-        "text_type": "description",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "code",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      }
-    ]
-  },
-   {
-    "site_no": "7",
-    "site_name": "gearbest",
-    "site_url": ["https://www.gearbest.com/promotion-collection-special-8117.html"],
-    "site_host": "gearbest",
    "web_scrape_key_elements": [
-      {
-        "text_type": "description",
-       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "code",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+     {
+        "site_url": "https://www.adidas.com/us/promotions",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "poster_content___39q_N"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h2",
+                    "prop": "class",
+                    "search_key":  "title___1vL99"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "summary___37JYH"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "summary___37JYH"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "summary___37JYH"
+                  }
+                ]
+              },
+          {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "gl-product-card"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "gl-badge"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "gl-badge"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "gl-badge"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "gl-badge"
+                  }
+                ]
+              }
+        ]
       }
     ]
   },
-   {
-    "site_no": "8",
+  {
+    "company_no": "2",
+    "site_name": "asos",
+    "site_host": "asos",
+    "web_scrape_key_elements":[
+      {
+        "site_url": "https://www.asos.com",
+        "scrape_filters": [
+          {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "src-GlobalBanner-Column-Column_column"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "src-GlobalBanner-Content-Content_copy"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "src-GlobalBanner-Content-Content_copy"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "src-GlobalBanner-Tooltip-Tooltip_tooltip"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "src-GlobalBanner-Tooltip-Tooltip_tooltip"
+                  }
+                ]
+              }
+        ]
+      }
+    ]
+  },
+  {
+    "company_no": "3",
+    "site_name": "booking",
+    "site_host": "booking",
+    "web_scrape_key_elements":[
+      {
+        "site_url": "https://www.booking.com/dealspage.en-us.html?slc=d1;aid=378266;label=sl-en-us-deal-gJ5VcBtZmwJpmGZaurzm0AS267778093627:pl:ta:p1:p22,563,000:ac:ap:neg:fi54112905013:tikwd-488842039672:lp1009919:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YYriJK-Ikd_dLBPOo0BdMww;ws=&gclid=CjwKCAiA2O39BRBjEiwApB2IkiB9gpYm6JgsyJU3tmdOxjLkXo1qi75blwiL5nZUD7WIrdw9CVujrRoC9eYQAvD_BwE",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "p",
+                  "prop": "class",
+                  "search_key": "bui-card__text deal-price-card deal-price-card__campaign-2019"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "bui-badge__text"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "bui-badge__text"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "deal-price-card"
+                  },
+                  {
+                    "text_type": "expiry",
+                     "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "bui-badge__text"
+                  }
+                ]
+              }
+        ]
+      }
+    ]
+  },
+  {
+    "company_no": "4",
+    "site_name": "decathlon",
+    "site_host": "decathlon",
+    "web_scrape_key_elements":[
+      {
+        "site_url":"https://www.decathlon.my/page/promotions.html",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "promo-card"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "card-title"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "card-title"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "card-title"
+                  },
+                  {
+                    "text_type": "expiry",
+                     "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "promo-date"
+                  }
+                ]
+              }
+        ]
+      }
+    ]
+  },
+  {
+    "company_no": "5",
+    "site_name": "elcorteingles",
+    "site_host": "elcorteingles",
+    "web_scrape_key_elements":[
+      {
+        "site_url":"https://www.elcorteingles.com/en/prices-worth-celebrating/",
+         "scrape_filters": [
+            {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "info"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "product-name"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "sale"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "discount"
+                  },
+                  {
+                    "text_type": "expiry",
+                     "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "discount"
+                  }
+                ]
+              }
+        ]
+      }
+    ]
+  },
+  {
+    "company_no": "6",
+    "site_name": "fnac",
+    "site_host": "fnac",
+    "web_scrape_key_elements":[
+      {
+        "site_url": "https://www.fnac.com/destockage/",
+         "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "li",
+                  "prop": "class",
+                  "search_key": "promo-ListItem"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "promo-ListItemLabel"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "promo-ListItemLabel"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "promo-ListItemLabel"
+                  },
+                  {
+                    "text_type": "expiry",
+                     "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "promo-ListItemLabel"
+                  }
+                ]
+              }
+        ]
+      },
+      {
+        "site_url": "https://www.fnac.com/choisir-carte#bl=marktlink5",
+         "scrape_filters": [
+            {
+                "parent_node": {
+                  "tag_name": "li",
+                  "prop": "class",
+                  "search_key": "wbmktCarte-item"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "promo-ListItemLabel"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "wbmktCarte-blkDescription"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "wbmktCarte-blkDescription"
+                  },
+                  {
+                    "text_type": "expiry",
+                     "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "wbmktCarte-blkDescription"
+                  }
+                ]
+              }
+        ]
+      }
+    ]
+  },
+  {
+    "company_no": "7",
+    "site_name": "gearbest",
+    "site_host": "gearbest",
+    "web_scrape_key_elements":[
+      {
+        "site_url": "https://www.gearbest.com/coupon.html",
+        "scrape_filters": [
+            {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "compItem_a3"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "compItem_titleWrap"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "compItem_couponHandle"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "compItem_couponLeft"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "compItem_couponLeft"
+                  }
+                ]
+              }
+        ]
+      }
+    ]
+  },
+  {
+    "company_no": "8",
     "site_name": "ikea",
-    "site_url": ["https://www.ikea.com/my/en/campaigns/"],
     "site_host": "ikea",
-     "web_scrape_key_elements": [
+    "web_scrape_key_elements":[
       {
-        "text_type": "description",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "code",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url":"https://www.ikea.com/my/en/campaigns/",
+        "scrape_filters": [
+            {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "g1ci6p1l vz2frqh v18by0fb"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "i76mo33 pub__designSystemText t91kxqv w1fdzi2f"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "i76mo33 pub__designSystemText t91kxqv w1fdzi2f"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "i76mo33 pub__designSystemText t91kxqv w1fdzi2f"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "i76mo33 pub__designSystemText t91kxqv w1fdzi2f"
+                  }
+                ]
+              }
+        ]
       }
     ]
   },
-    {
-    "site_no": "9",
+  {
+    "company_no": "9",
     "site_name": "joom",
-    "site_url": ["https://www.joom.com/en/promotions/5d12164c8b45130001718939"],
     "site_host": "joom",
-     "web_scrape_key_elements": [
+    "web_scrape_key_elements":[
       {
-        "text_type": "description",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "code",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.joom.com/en/promotions/5b4f355c1436d41e50f40c23",
+       "scrape_filters": [
+            {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "text___p6jU6"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "subtitle___oHQJ0"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "title___2-V6Q"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "title___2-V6Q"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "title___2-V6Q"
+                  }
+                ]
+              },
+            {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "product___2miP_ product___1h68n"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "name___1aqk8"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "discountBadge___miV5Y"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "badge___164Qm"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "badge___164Qm"
+                  }
+                ]
+              }
+        ]
       }
     ]
   },
   {
-    "site_no": "10",
+    "company_no": "10",
     "site_name": "leroymerlin",
-    "site_url": ["https://leroymerlin.co.za/explore-promotions"],
     "site_host": "leroymerlin",
-     "web_scrape_key_elements": [
+    "web_scrape_key_elements":[
       {
-        "text_type": "description",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "code",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://codepromo.lexpress.fr/code-promo-leroy-merlin",
+       "scrape_filters": [
+            {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "lexpress-voucher-content"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "lexpress-voucher-title-link"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "lexpress-voucher-title-link"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "lexpress-voucher-title-link"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "lexpress-voucher-title-link"
+                  }
+                ]
+              }
+        ]
       }
     ]
   },
-    {
-    "site_no": "11",
+  {
+    "company_no": "11",
     "site_name": "mediamarkt",
-    "site_url": ["https://www.mediamarkt.be/fr/shop/flyer.html"],
     "site_host": "mediamarkt",
-     "web_scrape_key_elements": [
+     "web_scrape_key_elements":[
       {
-        "text_type": "description",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "code",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.mediamarkt.be/fr/shop/flyer.html",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "promo-content"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "p",
+                    "prop": "class",
+                    "search_key":  ""
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "h2",
+                    "prop": "class",
+                    "search_key":  ""
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "p",
+                    "prop": "class",
+                    "search_key":  ""
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "p",
+                    "prop": "class",
+                    "search_key":  ""
+                  }
+                ]
+              }
+        ]
       }
     ]
   },
-   {
-    "site_no": "12",
+  {
+    "company_no": "12",
     "site_name": "Nike",
-    "site_url": ["https://www.nike.com/promo-code"],
     "site_host": "nike",
-     "web_scrape_key_elements": [
+   "web_scrape_key_elements":[
       {
-        "text_type": "description",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.nike.com/promo-code",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "figure",
+                  "prop": "class",
+                  "search_key": "image-card _3l8ZuNi4"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "_3T7SP3hk"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "_3T7SP3hk"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "_3T7SP3hk"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "_3T7SP3hk"
+                  }
+                ]
+              }
+        ]
+      },
+       {
+        "site_url": "https://www.nike.com/w/cyber-monday-95xas",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "header",
+                  "prop": "class",
+                  "search_key": "wall-header"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key":  "wall-header__title"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key":  "wall-header__title"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key":  "wall-header__title"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key":  "wall-header__title"
+                  }
+                ]
+              }
+        ]
       },
       {
-        "text_type": "code",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.nike.com/",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "swiper-wrapper"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "_2vXfoh-O"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "_8gPPHhHw"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "_8gPPHhHw"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "_8gPPHhHw"
+                  }
+                ]
+              }
+        ]
       }
     ]
   },
   {
-    "site_no": "13",
+    "company_no": "13",
     "site_name": "playstation",
-    "site_url": ["https://www.playstation.com/en-us/network/legal/promotions/"],
     "site_host": "playstation",
-     "web_scrape_key_elements": [
+     "web_scrape_key_elements":[
       {
-        "text_type": "description",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "code",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://store.playstation.com/en-us/deals",
+         "scrape_filters": [
+            {
+                "parent_node": {
+                  "tag_name": "section",
+                  "prop": "class",
+                  "search_key": "ems-sdk-product-tile__details"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "body-2 truncate-text-2 psw-p-t-2xs"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "discount-badge__container psw-l-anchor"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "discount-badge__container psw-l-anchor"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "discount-badge__container psw-l-anchor"
+                  }
+                ]
+              }
+        ]
       }
     ]
   },
   {
-    "site_no": "14",
+    "company_no": "14",
     "site_name": "ryanair",
-    "site_url": ["https://www.ryanair.com/gb/en/plan-trip/explore/promotions"],
     "site_host": "ryanair",
-     "web_scrape_key_elements": [
+    "web_scrape_key_elements":[
       {
-        "text_type": "description",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.ryanair.com/gb/en/plan-trip/explore/promotions",
+        "scrape_filters": [
+              {
+                "parent_node": {
+				  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "textandtitle_container"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "prop": "class",
+                    "tag_name": "div",
+                    "search_key": "textandtitle_textcontent"
+                  },
+				  {
+				   "text_type": "code",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandtitle_textcontent"
+                  },
+				  {
+				   "text_type": "terms",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandtitle_textcontent"
+                  },
+				  {
+				   "text_type": "expiry",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandtitle_textcontent"
+                  }
+                ]
+              }
+            ]
       },
       {
-        "text_type": "code",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.ryanair.com/gb/en/special-offer/buyonegetonefree",
+        "scrape_filters": [
+              {
+                "parent_node": {
+				  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "textandimage-component"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "prop": "class",
+                    "tag_name": "div",
+                    "search_key": "textandimage-header"
+                  },
+				  {
+				   "text_type": "code",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandimage-header"
+                  },
+				  {
+				   "text_type": "terms",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandimage-textcontent"
+                  },
+				  {
+				   "text_type": "expiry",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandimage-textcontent"
+                  }
+                ]
+              }
+            ]
       },
       {
-        "text_type": "expiry",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.ryanair.com/gb/en/special-offer/destinations-on-sale",
+        "scrape_filters": [
+              {
+                "parent_node": {
+				  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "textandtitle_container"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "prop": "class",
+                    "tag_name": "div",
+                    "search_key": "textandtitle_header"
+                  },
+				  {
+				   "text_type": "code",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandtitle_header"
+                  },
+				  {
+				   "text_type": "terms",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandtitle_header"
+                  },
+				  {
+				   "text_type": "expiry",
+                    "prop": "class",
+					"tag_name": "div",
+                    "search_key": "textandtitle_header"
+                  }
+                ]
+              }
+            ]
       }
     ]
   },
   {
-    "site_no": "15",
+    "company_no": "15",
     "site_name": "samsung",
-    "site_url": ["https://www.samsung.com/us/promotions/"],
     "site_host": "samsung",
-     "web_scrape_key_elements": [
+    "web_scrape_key_elements": [
       {
-        "text_type": "description",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.samsung.com/us/promotions/",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "sg-g-promotions-promo-cards__card-info"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h1",
+                    "prop": "class",
+                    "search_key": "sg-g-promotions-promo-cards__card-title"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "sg-g-promotions-promo-cards__card-text"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "sg-g-promotions-promo-cards__card-text"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "sg-g-promotions-promo-cards__card-date"
+                  }
+                ]
+              }
+        ]
       },
       {
-        "text_type": "code",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.samsung.com/us/shop/all-deals/",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "textBlock-wrapper"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h3",
+                    "prop": "class",
+                    "search_key": "textBlock-wrapper__desc"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "h3",
+                    "prop": "class",
+                    "search_key": "textBlock-wrapper__desc"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "h3",
+                    "prop": "class",
+                    "search_key": "textBlock-wrapper__desc"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "h3",
+                    "prop": "class",
+                    "search_key": "textBlock-wrapper__desc"
+                  }
+                ]
+              },
+             {
+                    "parent_node": {
+                      "tag_name": "div",
+                      "prop": "class",
+                      "search_key": "sg-g-promo-cards-container-card__text-block"
+                    },
+                    "prop_list": [
+                      {
+                        "text_type": "description",
+                        "tag_name": "div",
+                        "prop": "class",
+                        "search_key": "sg-g-promo-cards-container-card__text-block__desc"
+                      },
+                      {
+                        "text_type": "code",
+                        "tag_name": "div",
+                        "prop": "class",
+                        "search_key": "sg-g-promo-cards-container-card__text-block__title"
+                      },
+                      {
+                        "text_type": "terms",
+                        "tag_name": "div",
+                        "prop": "class",
+                        "search_key": "sg-g-promo-cards-container-card__text-block__desc"
+                      },
+                      {
+                        "text_type": "expiry",
+                        "tag_name": "div",
+                        "prop": "class",
+                        "search_key": "sg-g-promo-cards-container-card__text-block__desc"
+                      }
+                    ]
+                  }
+        ]
       }
     ]
   },
   {
-    "site_no": "16",
+    "company_no": "16",
     "site_name": "skyscanner",
-    "site_url": ["https://www.skyscanner.com/tips-and-inspiration/deals/daily-flights-deals"],
     "site_host": "skyscanner",
-     "web_scrape_key_elements": [
+    "web_scrape_key_elements": [
       {
-        "text_type": "description",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.skyscanner.com/tips-and-inspiration/deals/daily-flights-deals",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "single-post__main_content"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "single-post__summary entry-summary"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "single-post__summary entry-summary"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "single-post__summary entry-summary"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "single-post__summary entry-summary"
+                  }
+                ]
+              }
+        ]
+      },
+        {
+        "site_url": "https://www.skyscanner.net/news/deals/cyber-monday-deals",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "section",
+                  "prop": "class",
+                  "search_key": "BpkPanel_bpk-panel__1ms-z"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--xl__2xBzx DealCard_DealCard__placeName__1CMcr"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
+                  }
+                ]
+              }
+        ]
       },
       {
-        "text_type": "code",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.skyscanner.net/news/deals/black-friday-and-cyber-monday-holiday-deals-2",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "section",
+                  "prop": "class",
+                  "search_key": "BpkPanel_bpk-panel__1ms-z"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--xl__2xBzx DealCard_DealCard__placeName__1CMcr"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "BpkText_bpk-text__1KKbW BpkText_bpk-text--base__1zXAn DealCard_DealCard__discountValue__3FAvT"
+                  }
+                ]
+              }
+        ]
       }
     ]
   },
-   {
-    "site_no": "17",
+  {
+    "company_no": "17",
     "site_name": "supermercadosdia",
-    "site_url": ["https://www.supermercadosdia.com.ar/"],
     "site_host": "supermercadosdia",
      "web_scrape_key_elements": [
       {
-        "text_type": "description",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.supermercadosdia.com.ar/",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "card-body"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h6",
+                    "prop": "class",
+                    "search_key": "card-title"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "badge"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "badge"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "badge"
+                  }
+                ]
+              }
+        ]
       },
       {
-        "text_type": "code",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-         "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.tiendeo.com.ar/ofertas-catalogos/supermercados-dia",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "c·catalog__details"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h3",
+                    "prop": "class",
+                    "search_key": "c·catalog__title"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "p",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "p",
+                    "prop": "class",
+                    "search_key": "o·daysleft"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "p",
+                    "prop": "class",
+                    "search_key": "o·daysleft"
+                  }
+                ]
+              }
+        ]
       }
     ]
   },
-   {
-    "site_no": "18",
+  {
+    "company_no": "18",
     "site_name": "tradeinn",
-    "site_url": ["https://tradeinn.knoji.com/promo-codes/"],
     "site_host": "knoji",
     "web_scrape_key_elements": [
       {
-        "text_type": "description",
-       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "code",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://tradeinn.knoji.com/promo-codes/",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "span",
+                  "prop": "class",
+                  "search_key": "prel"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "codepill"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "codepill"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "codepill"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "codepill"
+                  }
+                ]
+              },
+            {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "promo3__middle"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "promo3__middle--left"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "input",
+                    "prop": "class",
+                    "search_key": "promo--codebox--small"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "promo3__middle--left"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "promo3__middle--left"
+                  }
+                ]
+              }
+        ]
       }
     ]
   },
-   {
-    "site_no": "19",
+  {
+    "company_no": "19",
     "site_name": "zalando",
-    "site_url": ["https://www.zalando.fr/promo-femme/"],
     "site_host": "zalando",
-     "web_scrape_key_elements": [
+   "web_scrape_key_elements": [
       {
-        "text_type": "description",
-       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.zalando.fr/promo-femme/",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "z-banner_text"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                     "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  }
+                ]
+              },
+           {
+                "parent_node": {
+                  "tag_name": "article",
+                  "prop": "class",
+                  "search_key": "_0mW-4D _0xLoFW JT3_zV mo6ZnF jtKZOh _78xIQ-"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h3",
+                    "prop": "class",
+                    "search_key": "u-6V88 ka2E9k uMhVZi FxZV-M z-oVg8 pVrzNP ZkIJC- r9BRio qXofat EKabf7"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  }
+                ]
+              },
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "JT3_zV"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  }
+                ]
+              }
+        ]
       },
       {
-        "text_type": "code",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.zalando.fr/promo-enfant/",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "z-banner_text"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                     "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  }
+                ]
+              },
+           {
+                "parent_node": {
+                  "tag_name": "article",
+                  "prop": "class",
+                  "search_key": "_0mW-4D _0xLoFW JT3_zV mo6ZnF jtKZOh _78xIQ-"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h3",
+                    "prop": "class",
+                    "search_key": "u-6V88 ka2E9k uMhVZi FxZV-M z-oVg8 pVrzNP ZkIJC- r9BRio qXofat EKabf7"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  }
+                ]
+              },
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "JT3_zV"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  }
+                ]
+              }
+        ]
+      },
+       {
+        "site_url": "https://www.zalando.fr/promo-homme/",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "z-banner_text"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                     "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  }
+                ]
+              },
+           {
+                "parent_node": {
+                  "tag_name": "article",
+                  "prop": "class",
+                  "search_key": "_0mW-4D _0xLoFW JT3_zV mo6ZnF jtKZOh _78xIQ-"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h3",
+                    "prop": "class",
+                    "search_key": "u-6V88 ka2E9k uMhVZi FxZV-M z-oVg8 pVrzNP ZkIJC- r9BRio qXofat EKabf7"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  }
+                ]
+              },
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "JT3_zV"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  }
+                ]
+              }
+        ]
       },
       {
-        "text_type": "expiry",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.zalando.fr/black-friday/",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "z-banner_text"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                     "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": ""
+                  }
+                ]
+              },
+           {
+                "parent_node": {
+                  "tag_name": "article",
+                  "prop": "class",
+                  "search_key": "_0mW-4D _0xLoFW JT3_zV mo6ZnF jtKZOh _78xIQ-"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h3",
+                    "prop": "class",
+                    "search_key": "u-6V88 ka2E9k uMhVZi FxZV-M z-oVg8 pVrzNP ZkIJC- r9BRio qXofat EKabf7"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key": "VnVJx_ ka2E9k uMhVZi dgII7d z-oVg8 pVrzNP DJxzzA FCIprz thcXNJ WCjo-q"
+                  }
+                ]
+              },
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "JT3_zV"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "DvypSJ"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "rQP559"
+                  }
+                ]
+              }
+        ]
       }
     ]
   },
-   {
-    "site_no": "20",
+  {
+    "company_no": "20",
     "site_name": "zara",
-    "site_url": ["https://www.zara.com/ww/#utm_referrer=https%3A%2F%2Fwww.google.com%2F"],
     "site_host": "zara",
-     "web_scrape_key_elements": [
-      {
-        "text_type": "description",
-       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+    "web_scrape_key_elements": [
+     {
+        "site_url": "https://www.zara.com/uk/en/woman-special-prices-l1314.html",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "product-info"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "span",
+                    "prop": "class",
+                    "search_key":  "product-name"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "product-info-item-label"
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "product-info-item-label"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key": "product-info-item-label"
+                  }
+                ]
+              }
+        ]
       },
       {
-        "text_type": "code",
-       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },{
-        "text_type": "terms",
-        "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
-      },
-      {
-        "text_type": "expiry",
-       "property_filter": [{"tag_name":"h2","prop_list":[{"prop":"class","search_key":"title___1vL99 withhtml___3nraa gl-heading--l"},{"prop":"class","search_key":"_3wU53n"}]},
-                        {"tag_name":"div","prop_list":[{"prop":"class","search_key":"summary___37JYH gl-body--l withhtml___3nraa"},{"prop":"class","search_key":"_3wU53n"}]}
-                       ]
+        "site_url": "https://www.forbes.com/coupons/zara.com/",
+        "scrape_filters": [
+           {
+                "parent_node": {
+                  "tag_name": "div",
+                  "prop": "class",
+                  "search_key": "promotion-discount-card__main"
+                },
+                "prop_list": [
+                  {
+                    "text_type": "description",
+                    "tag_name": "h3",
+                    "prop": "class",
+                    "search_key":  "promotion-discount-card__info__title mb-3"
+                  },
+                  {
+                    "text_type": "code",
+                    "tag_name": "",
+                    "prop": "",
+                    "search_key": ""
+                  },
+                  {
+                    "text_type": "terms",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "promotion-discount-card__info__description"
+                  },
+                  {
+                    "text_type": "expiry",
+                    "tag_name": "div",
+                    "prop": "class",
+                    "search_key":  "promotion-discount-card__info__description"
+                  }
+                ]
+              }
+        ]
       }
     ]
   }
