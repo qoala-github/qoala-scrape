@@ -157,7 +157,7 @@ async def fetch_and_send_web_scrape_data():
         print(msg)
         logger.info(msg)
 
-        web_scrape_handler = WebScrapeHandler()
+        web_scrape_handler = WebScrapeHandler()  
         result = await web_scrape_handler.send_promotion_data()
         print(f"result:{result}")
         logger.info(f"Success:{result}")
