@@ -15,3 +15,4 @@ class AppSetting:
     SITE_HOST = '127.0.0.1'
     SITE_HOST_PORT = 8000
     EXP_DATE_MAX_PARAGRAPH_LEN = 30
+    HEADLESS_BROWSER = True # To determine whether or not to open browser window when content extraction is done per URL
