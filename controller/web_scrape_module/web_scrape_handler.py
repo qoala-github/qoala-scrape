@@ -15,35 +15,21 @@ from selenium import webdriver
 app_settings = AppSetting()
 logger = logging.getLogger(__name__)
 
-# get the promotion keywords json
-keyword_json = None
-with open(app_settings.PROMOTION_KEY_WORDS_JSON_FILE) as pkf:
-    promo_keyword_json = json.load(pkf)
-
-# get the company details json
-company_json = None
-with open(app_settings.COMPANY_SITE_DETAILS_JSON_FILE) as f:
-    company_json = json.load(f)
-
-web_driver_path = app_settings.SELENIUM_WEB_DRIVER_PATH
-options = webdriver.FirefoxOptions()
-# options.add_argument('-headless')
-page_load_timeout = app_settings.SITE_LOAD_TIMEOUT
-max_exp_date_para_len = app_settings.EXP_DATE_MAX_PARAGRAPH_LEN
-
-# Get 2 weeks future date from today=>Client requirement
-current_utc = datetime.datetime.strptime(str(datetime.datetime.utcnow().date()), "%Y-%m-%d")
-current_utc_with_time = datetime.datetime.utcnow()
-date_diff = datetime.timedelta(weeks=2)
-exp_date_utc = current_utc + date_diff
-exp_date_split = str(exp_date_utc).split(' ')
-formatted_exp_date = f"{exp_date_split[0]}T{exp_date_split[1]}Z"
-
 
 class WebScrapeHandler:
     error_list = []
     main_list = []
     site_coupon_list = []
+    driver = None
+    max_exp_date_para_len = None
+    promo_keyword_json = None
+    company_json = None
+    formatted_exp_date = None
+    current_utc_with_time = None
+    max_exp_date_para_len = None
+    web_driver_path = None
+    web_driver_options = None
+    page_load_timeout = None
 
     async def fetch_site_data(self):
         loop_ref = ""
@@ -56,9 +42,9 @@ class WebScrapeHandler:
             company_no = ""
             site_name = ""
 
-            data_count = len(company_json)
+            data_count = len(self.company_json)
             for csl in range(data_count):
-                company_site_list.append(company_json[csl])
+                company_site_list.append(self.company_json[csl])
 
             for c in range(len(company_site_list)):
                 try:
@@ -94,7 +80,7 @@ class WebScrapeHandler:
 
             print(f"main_list:{self.main_list},no_of_items:{len(self.main_list)}")
             if len(self.main_list) > 0:
-                error_list_obj = {'time_stamp': str(current_utc_with_time), 'site_coupon_list': self.main_list}
+                error_list_obj = {'time_stamp': str(self.current_utc_with_time), 'site_coupon_list': self.main_list}
                 await self.save_json_as_file(error_list_obj, f'logs/{str(error_guid)}_payload.json')
 
             return self.main_list
@@ -247,9 +233,9 @@ class WebScrapeHandler:
 
     async def get_html_content(self, site_url):
         try:
-            driver = webdriver.Firefox(executable_path=web_driver_path,
-                                       firefox_options=options)
-            driver.set_page_load_timeout(page_load_timeout)
+            driver = webdriver.Firefox(executable_path=self.web_driver_path,
+                                       firefox_options=self.web_driver_options)
+            driver.set_page_load_timeout(self.page_load_timeout)
             driver.get(site_url)
             html_content = driver.page_source
             driver.quit()
@@ -312,7 +298,7 @@ class WebScrapeHandler:
         try:
             result = ""
             if descr_text is not None:
-                data_keys = promo_keyword_json["description"].get('keyword_list')
+                data_keys = self.promo_keyword_json["description"].get('keyword_list')
                 result = descr_text  # descr_text if self.is_keyword_found(data_keys, descr_text.lower()) else ""
             return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
@@ -334,7 +320,7 @@ class WebScrapeHandler:
             print(f"terms_text:{terms_text}")
             result = ""
             if terms_text is not None:
-                data_keys = promo_keyword_json["terms"].get('keyword_list')
+                data_keys = self.promo_keyword_json["terms"].get('keyword_list')
                 result = terms_text if await self.is_keyword_found(data_keys, terms_text.lower()) else ""
             return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
@@ -347,9 +333,9 @@ class WebScrapeHandler:
             result = ""
 
             if exp_date_text is not None:
-                data_keys = promo_keyword_json["expiry"].get('keyword_list')
+                data_keys = self.promo_keyword_json["expiry"].get('keyword_list')
                 result = exp_date_text if await self.is_keyword_found(data_keys, exp_date_text) else ""
-                result = formatted_exp_date if len(exp_date_text) > max_exp_date_para_len else result
+                result = self.formatted_exp_date if len(exp_date_text) > self.max_exp_date_para_len else result
                 return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
             msg = f'WebScrapeHandler=>get_expiry_date()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
@@ -439,7 +425,7 @@ class WebScrapeHandler:
                         res = await client.post(url=req_url, data=data_batch,
                                                 headers=headers_param)
                         print(f"res:{res}")
-                        msg = f"data_batch:{i+1},res_status={res.status_code}, res-reason={res.reason_phrase}, res_text={res.text}"
+                        msg = f"data_batch:{i + 1},res_status={res.status_code}, res-reason={res.reason_phrase}, res_text={res.text}"
                         print(msg)
                         logger.info(msg)
                         if res.status_code == 200:
@@ -478,6 +464,9 @@ class WebScrapeHandler:
 
     async def send_promotion_data(self):
         try:
+            await self.setup_web_driver_config()
+            await self.load_json_files()
+            await self.get_default_exp_date()
             result = await self.fetch_site_data()
             res = json.dumps(result)
 
@@ -514,3 +503,57 @@ class WebScrapeHandler:
             raise HTTPException(status_code=400, detail=msg)
 
     # endregion
+
+    # region "common functions"
+
+    async def get_default_exp_date(self):
+        try:
+            # Get 2 weeks future date from today=>Client requirement
+            current_utc = datetime.datetime.strptime(str(datetime.datetime.utcnow().date()), "%Y-%m-%d")
+            current_utc_with_time = datetime.datetime.utcnow()
+            self.current_utc_with_time = current_utc_with_time
+            date_diff = datetime.timedelta(weeks=2)
+            exp_date_utc = current_utc + date_diff
+            exp_date_split = str(exp_date_utc).split(' ')
+            formatted_exp_date = f"{exp_date_split[0]}T{exp_date_split[1]}Z"
+            self.formatted_exp_date = formatted_exp_date
+        except Exception:
+            msg = f'WebScrapeHandler=>get_default_exp_date():{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
+            print(msg)
+            logger.error(msg)
+            raise Exception
+
+    async def load_json_files(self):
+        try:
+            # get the promotion keywords json
+            keyword_json = None
+            with open(app_settings.PROMOTION_KEY_WORDS_JSON_FILE) as pkf:
+                promo_keyword_json = json.load(pkf)
+            # get the company details json
+            company_json = None
+            with open(app_settings.COMPANY_SITE_DETAILS_JSON_FILE) as f:
+                company_json = json.load(f)
+            self.promo_keyword_json = promo_keyword_json
+            self.company_json = company_json
+        except Exception:
+            msg = f'WebScrapeHandler=>load_json_files():{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
+            print(msg)
+            logger.error(msg)
+            raise Exception
+
+    async def setup_web_driver_config(self):
+        try:
+            self.web_driver_path = app_settings.SELENIUM_WEB_DRIVER_PATH
+            options = webdriver.FirefoxOptions()
+            if app_settings.HEADLESS_BROWSER:
+                options.add_argument('-headless')
+            self.web_driver_options = options
+            self.page_load_timeout = app_settings.SITE_LOAD_TIMEOUT
+            self.max_exp_date_para_len = app_settings.EXP_DATE_MAX_PARAGRAPH_LEN
+        except Exception:
+            msg = f'WebScrapeHandler=>setup_web_driver():{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
+            print(msg)
+            logger.error(msg)
+            raise Exception
+
+            # endregion
