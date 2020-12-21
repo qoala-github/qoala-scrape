@@ -16,7 +16,7 @@ The API code has been developed using the language Python(**Version 3.8.3**) alo
 
 FastAPI was chosen as the framework over other frameworks like Flask API and Django because it provides **more functionality while maintaining a lightweight nature**. Another advantage is that it has **built-in swagger documentation**. 
 
-After successfully setting up the FastAPI project we can navigate to the documentary=ion page by using the **‘/docs’** route as below: 
+After successfully setting up the FastAPI project we can navigate to the documentation page by using the **‘/docs’** route as below: 
 
 <IMG  src="https://lh6.googleusercontent.com/70UCkU70nqx0RWN_uVdo712ZKecQYUCkWkZ1y9dfrmC-lSwlFmrALKxu_Y0KJDj4scwl2UtvtM9AqWd_t9meV0QRtjK3XFSnY6DYdAk3TXBq9VUnlPjmU2vAc_cJT9yw1enuaW5d"  width="636"  height="304" style="margin-left:0px;margin-top:0px"/>
 
