@@ -8,6 +8,7 @@ Qoala Scrape is a python-based web scrape API to extract promotion details, coup
 4.	Project structure
 5.	Setting up the project for development/deployment
 6.	Executing the API for web scrape
+7.	Known issues 
 
 ## 1.) API Backend technology used 
 
@@ -41,7 +42,7 @@ Also, in order to maintain the **Python runtime version** of the application ano
 
 NOTE : In addition to this, the **_latest version of Mozilla Firefox_** should be installed in the server, since the library **‘selenium’** is used along with the **OS platform matching web driver named ‘geckodriver’** that extracts the HTML content from the given URL.
 
-## 4.) Hardware dependencies
+## 3.) Hardware dependencies
 
 This application was initially tested using a local Windows 64 bit machine having **_16GB of RAM memory_**. 
 
@@ -49,7 +50,7 @@ The application is totally cross-platform enabled but since the web scraping pro
 
 If it is a non-isolated, **_multi-app_** running machine, **_16GB would be the minimum recommended RAM memory_**.
 
-## 5.) Project structure
+## 4.) Project structure
 
 <IMG  src="https://lh6.googleusercontent.com/KQS5KnQswMWrGtxQiqBpAIwtY8rU1bh35rn7uvFGKbpCuEynQrcZwn7LVQfL_KWIT9uV9iT4Tj52jD957UKAYiVO16Q9Wk5BQh2d-QdGatv647hzjrMhEyUZ9TE7n-6Oe6kndlFK"  width="356"  height="489" style="margin-left:0px;margin-top:0px"/>
 
@@ -76,7 +77,7 @@ The **_app_settings.py_** file’s the value for **_‘SELENIUM_WEB_DRIVER_PATH�
 
 **_NOTE : the file ‘main.py’ is the file that initiates the application_**
 
-## 4.) Setting up the project for development/deployment
+## 5.) Setting up the project for development/deployment
 
 In order to set up the project for the first time in a development machine, the following steps should be followed :
 
@@ -130,7 +131,7 @@ In order to set up the project for the first time in a development machine, the 
 
 
 
-## 5.) Executing the API for web scrape
+## 6.) Executing the API for web scrape
 
 The web scrape API call can be triggered using 2 methods :
 
@@ -165,3 +166,9 @@ This is more or less similar to 1.) where the only difference is that the API ca
 
 
 When using external applications/code to get the token, use **x-www-form-urlencoded parameters** to send the username and password.
+
+## 7.) Known issues
+
+If the RAM memory is not enough for the web scrape process, the following error will be given:
+
+<B style="font-weight:normal"  id="docs-internal-guid-051fe871-7fff-3210-00b9-7760c79c0ea4"><SPAN style="border:none;width:602px;height:271px"><IMG  src="https://lh5.googleusercontent.com/picN_ZVYLEddfUao20uOFKcrDvJOPt_saCkL8caqrliCOO4D8dKrPX26kmAY11x1pgYSVH6snOHCNQLkb3DSGPUEa1f_O4cNOn3zCjCdPhvVpSmKeG6gwXRbiIWAScMwlrnqVSl5"  width="602"  height="271" style="margin-left:0px;margin-top:0px"/></SPAN></B>
