@@ -26,7 +26,7 @@ After successfully setting up the FastAPI project we can navigate to the documen
 
 Here, for a valid login, a JWT token will be provided. This token can then be used in the header when executing other API calls(NOTE: User details are maintained in a JSON file named ‘user.json’)
 
-NOTE: For the moment the API **does not use any authentication**.If required, the authentication can be applied as below :
+NOTE: For the moment the API **does not use any authentication for the web scrape method**.If required, the authentication can be applied as below :
 
 <B style="font-weight:normal"  id="docs-internal-guid-4465227b-7fff-17e7-39ea-93c02a2d240f"><SPAN style="border:none;width:602px;height:191px"><IMG  src="https://lh4.googleusercontent.com/J85gmRB0O1IAtoCJWDYfHALAh2p20Jwj8Bk38g4G8TK6RNt3VQFjJB6uNNkbZ44fVGBoGHV3oFTiZZ3x3OE6b6goKULsQH8okh2LcFHZP_LaC5liHTAjS3QvfYHcbKABzWG_jWz3"  width="602"  height="191" style="margin-left:0px;margin-top:0px"/></SPAN></B>
 
