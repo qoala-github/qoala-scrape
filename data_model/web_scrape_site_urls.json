@@ -369,15 +369,15 @@
                   },
                   {
                     "text_type": "terms",
-                    "tag_name": "div",
-                    "prop": "class",
-                    "search_key":  "compItem_couponLeft"
+                    "tag_name": "",
+                    "prop": "",
+                    "search_key":  ""
                   },
                   {
                     "text_type": "expiry",
-                    "tag_name": "div",
-                    "prop": "class",
-                    "search_key":  "compItem_couponLeft"
+                    "tag_name": "",
+                    "prop": "",
+                    "search_key":  ""
                   }
                 ]
               }
@@ -602,8 +602,8 @@
     "company_no": "12",
     "site_name": "Nike",
     "site_host": "nike",
-   "web_scrape_key_elements":[
-      {
+     "web_scrape_key_elements":[
+       {
         "site_url": "https://www.nike.com/promo-code",
         "scrape_filters": [
            {
@@ -679,7 +679,7 @@
               }
         ]
       },
-      {
+       {
         "site_url": "https://www.nike.com/",
         "scrape_filters": [
            {
