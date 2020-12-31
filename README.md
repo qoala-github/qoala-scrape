@@ -162,9 +162,9 @@ The file '**_data_model/web_site_scrape_urls.json'_** will be used as the main f
 
 This is more or less similar to 1.) where the only difference is that the API call is done remotely using POST method where 3rd party applications like Postman,Fiddler and any code like C#, Python, Java, Javascript..etc. are used.
    
-**_NOTE => If the API call is authenticated, it should be triggered as follows:_**
+**_NOTE => If the API call is authenticated, it should be triggered as shown in the .gif image in the following link:_**
 
-<IMG  src="https://lh3.googleusercontent.com/q4e9tm65ODa6lJBEdKHoJKDS79Oy2xBgmpZ5bAdo2MbZxfbYrdDxMkbXGYfb7mDe78ZX7ii6qYAevKRCO9Hj3LQ-TkqxjcF0FSaMSYfHUUrK0is4ulfMyQwAsLe3PM7mI-qE8exa"  width="403"  height="213" style="margin-left:0px;margin-top:0px"/>
+https://lh5.googleusercontent.com/8V5HWR0qtv4eEg9VrHHHRyR1-1B4u3RgJanFzHd9eGvRV57LXwAkHpez9OfBgcLBnm7zVFCmSfojyPSSdye246jWrXJGPqwsRhfrS-vhnGlfyV-8C-y89gVMNYcFqqFxYNoIPkf7
 
 When using external applications/code to get the token, use **x-www-form-urlencoded parameters** to send the username and password.
 
