@@ -298,8 +298,7 @@ class WebScrapeHandler:
         try:
             result = ""
             if descr_text is not None:
-                data_keys = self.promo_keyword_json["description"].get('keyword_list')
-                result = descr_text  # descr_text if self.is_keyword_found(data_keys, descr_text.lower()) else ""
+                result = descr_text
             return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
             msg = f'WebScrapeHandler=>get_description()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
