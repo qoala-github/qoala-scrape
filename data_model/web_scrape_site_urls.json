@@ -346,7 +346,7 @@
     "site_host": "gearbest",
     "web_scrape_key_elements":[
       {
-        "site_url": "https://www.gearbest.com/coupon.html",
+        "site_url": "https://es.gearbest.com/coupon.html",
         "scrape_filters": [
             {
                 "parent_node": {

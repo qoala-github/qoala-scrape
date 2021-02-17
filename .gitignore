@@ -17,3 +17,4 @@
 /controller/web_scrape_module/__pycache__/web_scrape_handler.cpython-38.pyc
 /logs
 /geckodriver.log
+/env
