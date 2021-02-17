@@ -89,8 +89,7 @@ def view_log_types(request: Request):
 @app.get('/log/{log_type_id:int}')
 def get_log_details(request: Request, log_type_id: str):
     try:
-        print(f"Inside main.py,get_log_details()=>log_type_id:{log_type_id}")
-        logger.info("main.py=>get_all_log_files")
+        logger.info(f"Inside main.py,get_log_details()=>log_type_id:{log_type_id}")
         log_file_vw = LogFileViewer()
         file_list_with_path = log_file_vw.get_all_files(log_type_id)
         context = {'request': request, 'file_list_with_path': file_list_with_path}
@@ -105,7 +104,7 @@ async def get_file_content(request: Request, file_path: str):
         log_file_vw = LogFileViewer()
         file_content = log_file_vw.show_file_content(file_path)
         file_content = file_content.splitlines(True)
-        print(f"File reading successful:{file_content}")
+        logger.info(f"File reading successful:{file_content}")
         context = {'request': request, 'file_content': file_content, 'file_name': file_path}
         return templates.TemplateResponse('log/file_content.html', context)
     except Exception:
@@ -154,28 +153,23 @@ async def fetch_and_send_web_scrape_data():
     try:
         start_time = datetime.datetime.utcnow()
         msg = f"Web scrape process started at {start_time} UTC"
-        print(msg)
         logger.info(msg)
 
         web_scrape_handler = WebScrapeHandler()  
         result = await web_scrape_handler.send_promotion_data()
-        print(f"result:{result}")
         logger.info(f"Success:{result}")
 
         end_time = datetime.datetime.utcnow()
         msg = f"Web scrape process finished at {end_time} UTC"
-        print(msg)
         logger.info(msg)
 
         time_diff = end_time - start_time
         msg = f"Total duration=>{time_diff}"
-        print(msg)
         logger.info(msg)
 
         return result
     except Exception:
         msg = f'WebScrapeHandler=>send_promotion_data()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-        print(msg)
         logger.error(msg)
         raise HTTPException(status_code=400, detail="Ocurrió un error inesperado")  # An unexpected error occured
 

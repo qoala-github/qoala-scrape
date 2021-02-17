@@ -16,3 +16,4 @@
 /controller/authorization/__pycache__
 /controller/web_scrape_module/__pycache__
 /geckodriver.log
+/env

@@ -49,7 +49,6 @@ class WebScrapeHandler:
             for c in range(len(company_site_list)):
                 try:
                     com_obj = company_site_list[c]
-                    print(com_obj)
                     logger.info(com_obj)
                     company_no = com_obj.get('company_no')
                     site_name = com_obj.get('site_name')
@@ -61,28 +60,25 @@ class WebScrapeHandler:
                     self.error_list.append(
                         {'error_loop_level': 'company_loop', 'company_no': company_no, 'company_name': site_name,
                          'error_msg': msg})
-                    print(msg)
                     logger.error(msg)
         except Exception:
             msg = f'WebScrapeHandler=>fetch_site_data()=>before_loop=>error_guid:{error_guid},loop_number:{loop_ref}:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
             self.error_list.append(msg)
-            print(msg)
             logger.error(msg)
             self.error_list.append(
                 {'error_loop_level': 'fetch_site_data,before_loop', 'company_no': '', 'company_name': '',
                  'error_msg': msg})
 
         finally:
-            print(f"error_list:{self.error_list}")
+            logger.info(f"error_list:{self.error_list}")
             if len(self.error_list) > 0:
                 error_list_obj = {'error_guid': str(error_guid), 'error_list': self.error_list}
                 await self.save_json_as_file(error_list_obj, f'logs/{str(error_guid)}.json')
 
-            print(f"main_list:{self.main_list},no_of_items:{len(self.main_list)}")
+            logger.info(f"main_list:{self.main_list},no_of_items:{len(self.main_list)}")
             if len(self.main_list) > 0:
                 error_list_obj = {'time_stamp': str(self.current_utc_with_time), 'site_coupon_list': self.main_list}
                 await self.save_json_as_file(error_list_obj, f'logs/{str(error_guid)}_payload.json')
-
             return self.main_list
 
     # region "Sub functions for for-loops"
@@ -94,14 +90,15 @@ class WebScrapeHandler:
                     self.site_coupon_list = []  # NOTE : The coupon list should be reset for each site URL
                     target_elem_obj = target_elem_list[i]
                     site_url = target_elem_obj.get('site_url')
-                    print(f"{company_no}:{site_url}")
+                    logger.info(f"{company_no}:{site_url}")
                     scrape_filters = target_elem_obj.get('scrape_filters')
                     soup = await self.get_html_content(site_url)
+                    logger.info(f"site-content:{soup}")
                     res_coupon_list = await self.read_scrape_filters(company_no, site_name, site_url, scrape_filters,
                                                                      soup)
                 except Exception:
                     msg = f'WebScrapeHandler=>fetch_site_data()=>company_loop=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-                    print(msg)
+                    logger.info(msg)
                     self.error_list.append(
                         {'error_loop_level': 'web_scrape_element_loop', 'company_no': company_no,
                          'company_name': site_name, 'site_url': site_url,
@@ -113,7 +110,6 @@ class WebScrapeHandler:
                         {"host": site_host, "url": site_url, "name": site_name, "coupons": res_coupon_list})
         except Exception:
             msg = f'WebScrapeHandler=>web_scrape_element_loop():{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
             self.error_list.append(
                 {'error_loop_level': 'scrape_filter_loop', 'company_no': company_no,
@@ -136,7 +132,7 @@ class WebScrapeHandler:
 
                     # get all elements from parent node
                     ele_list = html_soup.find_all(parent_tag, attrs=parent_attr)
-                    print(f"parent_tag(new):{parent_tag},ele_list:{ele_list}")
+                    logger.info(f"parent_tag(new):{parent_tag},ele_list:{ele_list}")
 
                     # get actual descendant elements
                     elem_by_field = await self.get_elems_by_field(prop_attr_sub_list)
@@ -152,7 +148,6 @@ class WebScrapeHandler:
                                                                             site_data)
                 except Exception:
                     msg = f'WebScrapeHandler=>fetch_site_data()=>company_loop=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-                    print(msg)
                     self.error_list.append(
                         {'error_loop_level': 'parent element', 'company_no': company_no,
                          'company_name': site_name, 'site_url': site_url,
@@ -160,7 +155,6 @@ class WebScrapeHandler:
                     logger.error(msg)
         except Exception:
             msg = f'WebScrapeHandler=>scrape_filter_loop():{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
             self.error_list.append(
                 {'error_loop_level': 'scrape_filter_loop', 'company_no': company_no,
@@ -208,7 +202,6 @@ class WebScrapeHandler:
                              "expiry": exp_text})
                 except Exception:
                     msg = f'WebScrapeHandler=>read_child_elements(),inside loop:{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-                    print(msg)
                     logger.error(msg)
                     self.error_list.append(
                         {'error_loop_level': 'read_child_elements(),inside loop',
@@ -218,7 +211,6 @@ class WebScrapeHandler:
             return self.site_coupon_list
         except Exception:
             msg = f'WebScrapeHandler=>child_element_loop():{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
             self.error_list.append(
                 {'error_loop_level': 'child_element_loop', 'company_no': site_data.get('company_no'),
@@ -243,8 +235,8 @@ class WebScrapeHandler:
             return soup
         except Exception:
             msg = f'WebScrapeHandler=>get_html_content()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
+
 
     async def get_elems_by_field(self, prop_attr_sub_list):
         try:
@@ -277,7 +269,6 @@ class WebScrapeHandler:
             return result_obj
         except Exception:
             msg = f'WebScrapeHandler=>get_elems_by_field()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
 
     async def is_keyword_found(self, keyword_list, element_text):
@@ -291,7 +282,6 @@ class WebScrapeHandler:
             return match_counter > 0
         except Exception:
             msg = f'WebScrapeHandler=>is_keyword_found()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
 
     async def get_description(self, descr_text):
@@ -302,7 +292,6 @@ class WebScrapeHandler:
             return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
             msg = f'WebScrapeHandler=>get_description()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
 
     async def get_coupon_code(self, coupon_code_text):
@@ -311,12 +300,11 @@ class WebScrapeHandler:
             return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
             msg = f'WebScrapeHandler=>get_coupon_code()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
 
     async def get_terms(self, terms_text):
         try:
-            print(f"terms_text:{terms_text}")
+            logger.info(f"terms_text:{terms_text}")
             result = ""
             if terms_text is not None:
                 data_keys = self.promo_keyword_json["terms"].get('keyword_list')
@@ -324,7 +312,6 @@ class WebScrapeHandler:
             return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
             msg = f'WebScrapeHandler=>get_terms()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
 
     async def get_expiry_date(self, exp_date_text):
@@ -338,7 +325,6 @@ class WebScrapeHandler:
                 return result.replace("\n", "").replace("\n\n", "").strip()
         except Exception:
             msg = f'WebScrapeHandler=>get_expiry_date()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
 
     # endregion
@@ -352,7 +338,6 @@ class WebScrapeHandler:
                 json.dump(json_obj, outfile)
         except Exception:
             msg = f'WebScrapeHandler=>save_json_as_file()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
 
     # endregion
@@ -364,16 +349,13 @@ class WebScrapeHandler:
             msg = f"Inside get_access_token()"
             access_token = ""
             req_url = f"{app_settings.CLIENT_API_URL_PREFIX}get_access_token"
-            print(msg)
             logger.info(msg)
             data = {"grant_type": "authorization_code"}
             msg = f"request data=>req_url={req_url},data={data}"
-            print(msg)
             logger.info(msg)
             res = requests.post(req_url, data=data)
             res_json = json.loads(res.text)
             msg = f"res_status={res.status_code}, res-reason={res.reason}, res_text={res.text}"
-            print(msg)
             logger.info(msg)
             if res.status_code == 200:
                 access_token = res_json["access_token"]
@@ -383,27 +365,22 @@ class WebScrapeHandler:
             return access_token
         except Exception:
             msg = f'WebScrapeHandler=>get_access_token():{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
             return "error"
 
     async def post_web_scrape_data(self, auth_token, web_scrape_data):
         try:
             msg = f"Inside post_web_scrape_data()=>auth_token={auth_token}"
-            print(msg)
             logger.info(msg)
             req_url = f"{app_settings.CLIENT_API_URL_PREFIX}brands"
             msg = f"req_url:{req_url}"
-            print(msg)
             logger.info(msg)
             body_data = web_scrape_data
             msg = {"req_url": req_url, "auth_token": auth_token, "data": body_data}
-            print(msg)
             logger.info(msg)
             headers_param = {"Content-type": "application/json"} if auth_token == "not_required" else {
                 "Authorization": f"Bearer {auth_token}", "Content-type": "application/json"}
             msg = f"headers_param:{headers_param}"
-            print(msg)
             logger.info(msg)
 
             client = http3.AsyncClient()
@@ -413,19 +390,16 @@ class WebScrapeHandler:
             for i in range(len(post_data_batch_list)):
                 try:
                     msg = f"Fetching data batch:{i + 1}"
-                    print(msg)
                     logger.info(msg)
                     data_batch = post_data_batch_list[i]
                     # NOTE : If the list is empty then the string is '[]' which is a string of length 2
                     if data_batch is not None and len(data_batch) > 2:
                         msg = f"Data batch {i + 1} is valid"
-                        print(msg)
                         logger.info(msg)
                         res = await client.post(url=req_url, data=data_batch,
                                                 headers=headers_param)
-                        print(f"res:{res}")
+                        logger.info(f"res:{res}")
                         msg = f"data_batch:{i + 1},res_status={res.status_code}, res-reason={res.reason_phrase}, res_text={res.text}"
-                        print(msg)
                         logger.info(msg)
                         if res.status_code == 200:
                             batch_error_count += 0
@@ -433,17 +407,14 @@ class WebScrapeHandler:
                             batch_error_count += 1
                 except Exception:
                     msg = f'WebScrapeHandler=>post_web_scrape_data():Data batch loop=>Data batch{i + 1}{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-                    print(msg)
                     logger.error(msg)
             msg = f"dat_batch_error_count={batch_error_count}"
-            print(msg)
             logger.info(msg)
             result_message = "Publicó con éxito los datos del raspado de la web" if batch_error_count == 0 else f"{batch_error_count} de cada {len(post_data_batch_list)} lotes de datos no se cargaron"
             result_status = "success" if batch_error_count == 0 else "error"
             return result_status, result_message
         except Exception:
             msg = f'WebScrapeHandler=>post_web_scrape_data():{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
             return "error", "Se produjo un error al publicar los datos del web scrape"
 
@@ -457,7 +428,6 @@ class WebScrapeHandler:
             return post_data_batch_list
         except Exception:
             msg = f'WebScrapeHandler=>get_data_batches():{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
             raise Exception
 
@@ -475,9 +445,7 @@ class WebScrapeHandler:
 
             if access_token is not None and access_token != "error":
                 msg = f"Successfully received access_token={access_token}"
-                print(msg)
                 logger.info(msg)
-
                 result_status, result_msg = await self.post_web_scrape_data(auth_token=access_token,
                                                                             web_scrape_data=res)
 
@@ -487,17 +455,13 @@ class WebScrapeHandler:
                     return {"Message": result_msg}
                 else:
                     # An Error occurred while posting the web scrape data
-                    print(result_msg)
                     logger.error(result_msg)
                     raise HTTPException(status_code=400, detail=result_msg)
             else:
                 msg = "Ficha de acceso inválida"
-                print(msg)
                 raise HTTPException(status_code=400, detail=msg)
-            return response
         except Exception:
             msg = f'WebScrapeHandler=>send_promotion_data()=>{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
             raise HTTPException(status_code=400, detail=msg)
 
@@ -518,7 +482,6 @@ class WebScrapeHandler:
             self.formatted_exp_date = formatted_exp_date
         except Exception:
             msg = f'WebScrapeHandler=>get_default_exp_date():{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
             raise Exception
 
@@ -536,7 +499,6 @@ class WebScrapeHandler:
             self.company_json = company_json
         except Exception:
             msg = f'WebScrapeHandler=>load_json_files():{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
             raise Exception
 
@@ -551,7 +513,6 @@ class WebScrapeHandler:
             self.max_exp_date_para_len = app_settings.EXP_DATE_MAX_PARAGRAPH_LEN
         except Exception:
             msg = f'WebScrapeHandler=>setup_web_driver():{sys.exc_info()[2]}/n{traceback.format_exc()} occurred'
-            print(msg)
             logger.error(msg)
             raise Exception
 
