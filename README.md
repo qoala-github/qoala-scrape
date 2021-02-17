@@ -119,7 +119,7 @@ In order to set up the project for the first time in a development machine, the 
 
 5. Install the other referenced packages all at once : 
 
-   **_pip install -r requirement.txt_** 
+   **_pip install -r requirements.txt_** 
    or
    **_python -m pip install --target pythonFiles --implementation py --no-deps -r requirements.txt_**
 
